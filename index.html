@@ -755,42 +755,36 @@
       }
 
       body.scrolled .topbar {
-        padding: 12px 14px;
-        gap: 12px;
+        padding: 10px 14px;
+        gap: 10px;
         border-radius: 22px;
+        align-items: center;
+        justify-content: flex-start;
       }
 
       body.scrolled .brand {
         gap: 10px;
+        align-items: center;
       }
 
       body.scrolled .brand-mark {
-        width: 36px;
-        height: 36px;
-        font-size: 17px;
+        width: 34px;
+        height: 34px;
+        font-size: 16px;
         border-radius: 12px;
       }
 
       body.scrolled .brand-copy strong {
-        font-size: 0.83rem;
+        font-size: 0.8rem;
       }
 
       body.scrolled .brand-copy span {
-        font-size: 0.72rem;
-        opacity: 0.72;
+        display: none;
       }
 
-      body.scrolled nav {
-        gap: 10px;
-      }
-
-      body.scrolled nav a {
-        font-size: 0.82rem;
-      }
-
+      body.scrolled nav,
       body.scrolled .call-chip {
-        padding: 8px 12px;
-        font-size: 0.82rem;
+        display: none;
       }
 
       .hero,
@@ -1066,7 +1060,7 @@
   </main>
   <script>
     const updateHeaderState = () => {
-      document.body.classList.toggle("scrolled", window.scrollY > 24);
+      document.body.classList.toggle("scrolled", window.scrollY > 4);
     };
 
     updateHeaderState();
