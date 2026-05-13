@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Repair | Fix It Mobile</title>
+  <style>
+    :root {
+      --bg: #f4eee6;
+      --surface: rgba(255, 252, 246, 0.9);
+      --surface-strong: #fffdf9;
+      --ink: #18261f;
+      --ink-soft: #556159;
+      --line: rgba(24, 38, 31, 0.1);
+      --brand: #d96d3d;
+      --brand-deep: #b54d20;
+      --accent: #1d654f;
+      --accent-soft: #ddf1e8;
+      --shadow: 0 24px 60px rgba(50, 38, 23, 0.12);
+      --radius-xl: 34px;
+      --radius-lg: 24px;
+      --radius-md: 18px;
+      --radius-sm: 14px;
+      --max-width: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(217, 109, 61, 0.16), transparent 28%),
+        radial-gradient(circle at 88% 0%, rgba(29, 101, 79, 0.13), transparent 22%),
+        linear-gradient(180deg, #f8f3eb 0%, #f4eee6 42%, #f7f4ef 100%);
+      font-family: "Avenir Next", "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.14) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.2), transparent 80%);
+      opacity: 0.35;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .shell {
+      width: min(var(--max-width), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 18px 0 0;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 16px 22px;
+      background: rgba(24, 38, 31, 0.9);
+      color: #fffaf2;
+      border: 1px solid rgba(255, 250, 242, 0.12);
+      border-radius: 999px;
+      box-shadow: 0 18px 40px rgba(21, 35, 29, 0.24);
+      backdrop-filter: blur(18px);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--brand), #f2ba63);
+      color: white;
+      font-size: 22px;
+      font-weight: 800;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
+    }
+
+    .brand-copy strong {
+      display: block;
+      font-size: 1rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .brand-copy span {
+      color: rgba(255, 250, 242, 0.74);
+      font-size: 0.86rem;
+    }
+
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .top-link {
+      text-decoration: none;
+      color: rgba(255, 250, 242, 0.86);
+      font-size: 0.94rem;
+    }
+
+    .top-call {
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    main {
+      padding: 28px 0 76px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(310px, 0.95fr);
+      gap: 22px;
+      margin-bottom: 26px;
+    }
+
+    .hero-card,
+    .info-card,
+    .form-card,
+    .pay-card {
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card {
+      padding: 38px;
+      color: #fff8ee;
+      background:
+        linear-gradient(145deg, rgba(22, 43, 34, 0.96), rgba(28, 74, 57, 0.92) 54%, rgba(217, 109, 61, 0.9)),
+        #183128;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      width: fit-content;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(255, 250, 242, 0.12);
+      border: 1px solid rgba(255, 250, 242, 0.14);
+      color: #fff1de;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.8rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .hero-card h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.7rem, 5vw, 4.8rem);
+      line-height: 0.94;
+      letter-spacing: -0.05em;
+      margin-bottom: 18px;
+    }
+
+    .hero-card p {
+      max-width: 620px;
+      color: rgba(255, 248, 238, 0.88);
+      font-size: 1.06rem;
+      margin-bottom: 24px;
+    }
+
+    .hero-points {
+      display: grid;
+      gap: 12px;
+    }
+
+    .hero-point {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 12px;
+      align-items: start;
+      padding: 14px 16px;
+      border-radius: 20px;
+      background: rgba(255, 250, 242, 0.09);
+      border: 1px solid rgba(255, 250, 242, 0.1);
+    }
+
+    .point-badge {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: rgba(255, 250, 242, 0.18);
+      font-weight: 800;
+    }
+
+    .hero-point strong {
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .hero-point span {
+      color: rgba(255, 248, 238, 0.82);
+      font-size: 0.94rem;
+    }
+
+    .info-card {
+      padding: 30px;
+      background: rgba(255, 253, 249, 0.88);
+      border: 1px solid var(--line);
+    }
+
+    .info-card h2,
+    .pay-card h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 2rem;
+      line-height: 1;
+      margin-bottom: 14px;
+    }
+
+    .info-card p,
+    .pay-card p,
+    .form-intro p {
+      color: var(--ink-soft);
+    }
+
+    .info-stack {
+      display: grid;
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .info-chip {
+      padding: 16px 18px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, rgba(221, 241, 232, 0.82), rgba(255, 241, 229, 0.92));
+    }
+
+    .info-chip strong {
+      display: block;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(300px, 0.92fr);
+      gap: 22px;
+      align-items: start;
+    }
+
+    .form-card,
+    .pay-card {
+      padding: 32px;
+      background: rgba(255, 253, 249, 0.92);
+      border: 1px solid var(--line);
+    }
+
+    .form-intro {
+      margin-bottom: 24px;
+    }
+
+    .form-intro h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 0.98;
+      margin-bottom: 12px;
+    }
+
+    form {
+      display: grid;
+      gap: 18px;
+    }
+
+    .field-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .field,
+    .stacked-field {
+      display: grid;
+      gap: 8px;
+    }
+
+    label {
+      font-size: 0.93rem;
+      font-weight: 800;
+      color: var(--ink);
+    }
+
+    .label-note {
+      color: var(--ink-soft);
+      font-weight: 600;
+      font-size: 0.84rem;
+      margin-left: 6px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 16px;
+      border: 1px solid rgba(24, 38, 31, 0.12);
+      background: rgba(255, 255, 255, 0.92);
+      color: var(--ink);
+      font: inherit;
+    }
+
+    textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: 2px solid rgba(217, 109, 61, 0.22);
+      border-color: rgba(217, 109, 61, 0.36);
+    }
+
+    .contact-options {
+      display: grid;
+      gap: 10px;
+    }
+
+    .option-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .option-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 16px;
+      border-radius: 999px;
+      background: rgba(221, 241, 232, 0.48);
+      border: 1px solid rgba(29, 101, 79, 0.12);
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .option-pill input {
+      width: auto;
+      padding: 0;
+      accent-color: var(--brand);
+    }
+
+    .upload-box {
+      padding: 18px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, rgba(255, 241, 229, 0.7), rgba(221, 241, 232, 0.72));
+      border: 1px dashed rgba(24, 38, 31, 0.16);
+    }
+
+    .upload-box p {
+      color: var(--ink-soft);
+      font-size: 0.92rem;
+      margin-top: 6px;
+    }
+
+    .preview-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .preview-grid:empty {
+      display: none;
+    }
+
+    .preview-item {
+      overflow: hidden;
+      border-radius: 18px;
+      border: 1px solid rgba(24, 38, 31, 0.1);
+      background: rgba(255, 255, 255, 0.86);
+    }
+
+    .preview-item img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .preview-item span {
+      display: block;
+      padding: 10px 12px;
+      color: var(--ink-soft);
+      font-size: 0.84rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .helper-copy {
+      color: var(--ink-soft);
+      font-size: 0.9rem;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 800;
+      border: 0;
+      cursor: pointer;
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      color: white;
+      background: linear-gradient(135deg, var(--brand), #ef966b);
+      box-shadow: 0 18px 30px rgba(217, 109, 61, 0.28);
+    }
+
+    .button-secondary {
+      color: var(--ink);
+      background: rgba(221, 241, 232, 0.72);
+      border: 1px solid rgba(29, 101, 79, 0.14);
+    }
+
+    .pay-card {
+      position: sticky;
+      top: 22px;
+    }
+
+    .deposit-box {
+      margin: 22px 0 18px;
+      padding: 18px 20px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, rgba(29, 101, 79, 0.08), rgba(217, 109, 61, 0.14));
+    }
+
+    .deposit-box strong {
+      display: block;
+      color: var(--accent);
+      font-size: 1.34rem;
+      margin-bottom: 6px;
+    }
+
+    .pay-list {
+      display: grid;
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+
+    .pay-step {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 12px;
+      align-items: start;
+      padding: 14px 16px;
+      border-radius: 20px;
+      background: rgba(255, 247, 240, 0.88);
+    }
+
+    .pay-step strong {
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .pay-step span {
+      color: var(--ink-soft);
+      font-size: 0.92rem;
+    }
+
+    .deposit-note {
+      color: var(--ink-soft);
+      font-size: 0.9rem;
+    }
+
+    .alt-contact {
+      margin-top: 22px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(24, 38, 31, 0.08);
+    }
+
+    .alt-contact strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 0.96rem;
+    }
+
+    .alt-contact a {
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    footer {
+      padding-top: 18px;
+      text-align: center;
+      color: #607067;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 980px) {
+      .hero,
+      .content-grid,
+      .field-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pay-card {
+        position: static;
+      }
+
+      .preview-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 760px) {
+      .topbar,
+      .top-actions {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .top-actions {
+        width: 100%;
+      }
+
+      .top-call,
+      .top-link,
+      .button {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .hero-card,
+      .info-card,
+      .form-card,
+      .pay-card {
+        padding: 24px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .shell {
+        width: min(var(--max-width), calc(100% - 20px));
+      }
+
+      .preview-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="shell">
+      <div class="topbar">
+        <a class="brand" href="index.html">
+          <div class="brand-mark">F</div>
+          <div class="brand-copy">
+            <strong>Fix It Mobile</strong>
+            <span>Booking and repair intake</span>
+          </div>
+        </a>
+        <div class="top-actions">
+          <a class="top-link" href="index.html">Back to Home</a>
+          <a class="top-call" href="tel:+16124242111">Call (612) 424-2111</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <div class="hero-card">
+        <div class="eyebrow">Mobile repair request</div>
+        <h1>Tell us what happened before we head your way.</h1>
+        <p>Send your contact info, device type, issue details, and photos in one place so Fix It Mobile can review the problem, call you back, and help you decide whether to move forward with the $20 mobile visit deposit.</p>
+        <div class="hero-points">
+          <div class="hero-point">
+            <div class="point-badge">1</div>
+            <div>
+              <strong>Send the details first</strong>
+              <span>Customers can describe the issue before they commit to the visit fee.</span>
+            </div>
+          </div>
+          <div class="hero-point">
+            <div class="point-badge">2</div>
+            <div>
+              <strong>Upload damage photos</strong>
+              <span>Cracks, bent ports, back glass, and battery swelling are easier to assess with a photo.</span>
+            </div>
+          </div>
+          <div class="hero-point">
+            <div class="point-badge">3</div>
+            <div>
+              <strong>Pay separately when ready</strong>
+              <span>Deposit payment stays simple and secure through your Square checkout.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="info-card">
+        <h2>What customers should send</h2>
+        <p>The more specific the request, the easier it is to quote parts, estimate timing, and call back with useful answers.</p>
+        <div class="info-stack">
+          <div class="info-chip">
+            <strong>Best contact method</strong>
+            <span>Email works well for photos, but a cell number makes it easier to call or text back fast.</span>
+          </div>
+          <div class="info-chip">
+            <strong>Device model or type</strong>
+            <span>iPhone, Samsung, iPad, tablet, or another device category with extra notes if needed.</span>
+          </div>
+          <div class="info-chip">
+            <strong>Photo attachments</strong>
+            <span>Up to 10MB total based on FormSubmit's file upload limit.</span>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="content-grid">
+      <div class="form-card">
+        <div class="form-intro">
+          <h2>Send a repair request</h2>
+          <p>This form emails the request directly to your business inbox. The first time it gets submitted, FormSubmit may send a one-time confirmation email to activate the form for your address.</p>
+        </div>
+
+        <form action="https://formsubmit.co/info@fixitmobile.us" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="_subject" value="New Fix It Mobile repair request" />
+          <input type="hidden" name="_next" value="https://fixitmobile.us/thanks.html" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+
+          <div class="field-grid">
+            <div class="field">
+              <label for="first-name">First name</label>
+              <input id="first-name" name="First name" type="text" autocomplete="given-name" required />
+            </div>
+            <div class="field">
+              <label for="last-name">Last name</label>
+              <input id="last-name" name="Last name" type="text" autocomplete="family-name" required />
+            </div>
+          </div>
+
+          <div class="field-grid">
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+            <div class="field">
+              <label for="phone">Cell phone</label>
+              <input id="phone" name="Cell phone" type="tel" autocomplete="tel" placeholder="(612) 424-2111" required />
+            </div>
+          </div>
+
+          <div class="stacked-field contact-options">
+            <label>Best way to reach you <span class="label-note">Choose at least one</span></label>
+            <div class="option-row">
+              <label class="option-pill"><input type="checkbox" name="Preferred contact" value="Call" checked /> Call me</label>
+              <label class="option-pill"><input type="checkbox" name="Preferred contact" value="Text" /> Text me</label>
+              <label class="option-pill"><input type="checkbox" name="Preferred contact" value="Email" /> Email me</label>
+            </div>
+          </div>
+
+          <div class="field-grid">
+            <div class="field">
+              <label for="device-type">Device type</label>
+              <select id="device-type" name="Device type" required>
+                <option value="">Choose a device</option>
+                <option>iPhone</option>
+                <option>Samsung</option>
+                <option>iPad</option>
+                <option>Tablet</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field hidden" id="other-device-wrap">
+              <label for="other-device">Other device</label>
+              <input id="other-device" name="Other device" type="text" placeholder="Pixel 8 Pro, Motorola, game console..." />
+            </div>
+          </div>
+
+          <div class="field-grid">
+            <div class="field">
+              <label for="device-model">Device model <span class="label-note">Optional but helpful</span></label>
+              <input id="device-model" name="Device model" type="text" placeholder="iPhone 13 Pro Max" />
+            </div>
+            <div class="field">
+              <label for="service-needed">What do you think is wrong?</label>
+              <select id="service-needed" name="Requested service" required>
+                <option value="">Choose one</option>
+                <option>Screen repair</option>
+                <option>Battery replacement</option>
+                <option>Charging port repair</option>
+                <option>Screen protector</option>
+                <option>Back glass repair</option>
+                <option>Diagnostic / not sure yet</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="stacked-field">
+            <label for="issue-details">Describe the issue</label>
+            <textarea id="issue-details" name="Issue details" placeholder="Tell us what happened, what the phone is doing now, and whether you want a quote, callback, or repair visit." required></textarea>
+          </div>
+
+          <div class="stacked-field">
+            <label for="photo-upload">Upload photos <span class="label-note">Optional</span></label>
+            <div class="upload-box">
+              <input id="photo-upload" name="attachment" type="file" accept="image/png,image/jpeg,image/webp" multiple />
+              <p>Upload close photos of the damage or the full device. These files will be sent with the repair request email.</p>
+              <div class="preview-grid" id="preview-grid"></div>
+            </div>
+          </div>
+
+          <div class="stacked-field">
+            <label for="location-note">Preferred area or meeting location <span class="label-note">Optional</span></label>
+            <input id="location-note" name="Preferred area" type="text" placeholder="Edina, Bloomington, Eagan, Minneapolis..." />
+          </div>
+
+          <div class="button-row">
+            <button class="button button-primary" type="submit">Send Repair Request</button>
+            <a class="button button-secondary" href="https://checkout.square.site/merchant/MLZWW74P8HSVE/checkout/LESM5RNBYTT5KAB76HYXXYL5" target="_blank" rel="noopener noreferrer">Pay $20 Deposit</a>
+          </div>
+          <p class="helper-copy">The request form and the deposit are intentionally separate, so people can ask questions first and pay when they are ready.</p>
+        </form>
+      </div>
+
+      <aside class="pay-card">
+        <h2>$20 visit deposit</h2>
+        <p>The mobile visit and diagnostic deposit reserves the appointment and can be applied toward the repair when the device is repairable and you approve the work.</p>
+
+        <div class="deposit-box">
+          <strong>Secure Square checkout</strong>
+          <span>Fast payment for the mobile visit deposit after the customer sends the request form.</span>
+        </div>
+
+        <div class="pay-list">
+          <div class="pay-step">
+            <div class="point-badge">1</div>
+            <div>
+              <strong>Send the form</strong>
+              <span>Get the issue, contact info, and images into your inbox first.</span>
+            </div>
+          </div>
+          <div class="pay-step">
+            <div class="point-badge">2</div>
+            <div>
+              <strong>Review or call back</strong>
+              <span>Decide whether to quote, answer questions, or move to an appointment.</span>
+            </div>
+          </div>
+          <div class="pay-step">
+            <div class="point-badge">3</div>
+            <div>
+              <strong>Collect the deposit</strong>
+              <span>Use the Square button when the customer is ready to reserve the visit.</span>
+            </div>
+          </div>
+        </div>
+
+        <a class="button button-primary" href="https://checkout.square.site/merchant/MLZWW74P8HSVE/checkout/LESM5RNBYTT5KAB76HYXXYL5" target="_blank" rel="noopener noreferrer">Pay $20 Deposit</a>
+        <p class="deposit-note">If the device is not repairable, or if the customer declines the repair after inspection, the $20 visit fee is non-refundable.</p>
+
+        <div class="alt-contact">
+          <strong>Need to talk first?</strong>
+          <p>Customers can still call or text if they are not ready to fill out the form.</p>
+          <a href="tel:+16124242111">(612) 424-2111</a>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 Fix It Mobile Phone Repair. All rights reserved.</p>
+    </footer>
+  </main>
+
+  <script>
+    const deviceType = document.getElementById("device-type");
+    const otherDeviceWrap = document.getElementById("other-device-wrap");
+    const otherDeviceInput = document.getElementById("other-device");
+    const photoUpload = document.getElementById("photo-upload");
+    const previewGrid = document.getElementById("preview-grid");
+
+    const syncOtherDeviceField = () => {
+      const showOther = deviceType.value === "Other";
+      otherDeviceWrap.classList.toggle("hidden", !showOther);
+      otherDeviceInput.required = showOther;
+      if (!showOther) {
+        otherDeviceInput.value = "";
+      }
+    };
+
+    const renderPreviews = () => {
+      previewGrid.innerHTML = "";
+      const files = Array.from(photoUpload.files || []);
+
+      files.forEach((file) => {
+        if (!file.type.startsWith("image/")) {
+          return;
+        }
+
+        const preview = document.createElement("div");
+        preview.className = "preview-item";
+
+        const image = document.createElement("img");
+        image.src = URL.createObjectURL(file);
+        image.alt = file.name;
+
+        const label = document.createElement("span");
+        label.textContent = file.name;
+
+        preview.appendChild(image);
+        preview.appendChild(label);
+        previewGrid.appendChild(preview);
+      });
+    };
+
+    deviceType.addEventListener("change", syncOtherDeviceField);
+    photoUpload.addEventListener("change", renderPreviews);
+    syncOtherDeviceField();
+  </script>
+</body>
+</html>
