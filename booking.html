@@ -392,6 +392,16 @@
       font-size: 0.9rem;
     }
 
+    .form-status {
+      min-height: 24px;
+      color: var(--ink-soft);
+      font-size: 0.92rem;
+    }
+
+    .form-status.error {
+      color: #a3452a;
+    }
+
     .button-row {
       display: flex;
       flex-wrap: wrap;
@@ -629,14 +639,10 @@
       <div class="form-card">
         <div class="form-intro">
           <h2>Send a repair request</h2>
-          <p>This form emails the request directly to your business inbox. The first time it gets submitted, FormSubmit may send a one-time confirmation email to activate the form for your address.</p>
+          <p>This form is set up for Formspree so customers can send repair requests without hitting the old FormSubmit activation and host-error pages.</p>
         </div>
 
-        <form action="https://formsubmit.co/info@fixitmobile.us" method="POST">
-          <input type="hidden" name="_subject" value="New Fix It Mobile repair request" />
-          <input type="hidden" name="_next" value="https://fixitmobile.us/thanks.html" />
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_template" value="table" />
+        <form id="repair-form" action="https://formspree.io/f/xojbjazk" method="POST" novalidate>
 
           <div class="field-grid">
             <div class="field">
@@ -728,6 +734,7 @@
             <button class="button button-primary" type="submit">Send Repair Request</button>
             <a class="button button-secondary" href="https://checkout.square.site/merchant/MLZWW74P8HSVE/checkout/LESM5RNBYTT5KAB76HYXXYL5" target="_blank" rel="noopener noreferrer">Pay $20 Deposit</a>
           </div>
+          <p class="form-status" id="form-status"></p>
           <p class="helper-copy">The request form and the deposit are intentionally separate, so people can ask questions first and pay when they are ready.</p>
         </form>
       </div>
@@ -782,9 +789,13 @@
   </main>
 
   <script>
+    const FORMSPREE_ENDPOINT = "https://formspree.io/f/xojbjazk";
     const deviceType = document.getElementById("device-type");
     const otherDeviceWrap = document.getElementById("other-device-wrap");
     const otherDeviceInput = document.getElementById("other-device");
+    const repairForm = document.getElementById("repair-form");
+    const formStatus = document.getElementById("form-status");
+
     const syncOtherDeviceField = () => {
       const showOther = deviceType.value === "Other";
       otherDeviceWrap.classList.toggle("hidden", !showOther);
@@ -796,6 +807,38 @@
 
     deviceType.addEventListener("change", syncOtherDeviceField);
     syncOtherDeviceField();
+
+    repairForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      if (!repairForm.reportValidity()) {
+        formStatus.textContent = "Please complete the required fields before sending your request.";
+        formStatus.classList.add("error");
+        return;
+      }
+
+      formStatus.textContent = "Sending your request...";
+      formStatus.classList.remove("error");
+
+      try {
+        const response = await fetch(FORMSPREE_ENDPOINT, {
+          method: "POST",
+          body: new FormData(repairForm),
+          headers: {
+            Accept: "application/json"
+          }
+        });
+
+        if (!response.ok) {
+          throw new Error("Request failed");
+        }
+
+        window.location.href = "thanks.html";
+      } catch (error) {
+        formStatus.textContent = "We could not send the request right now. Please call, text, or email Fix It Mobile directly.";
+        formStatus.classList.add("error");
+      }
+    });
   </script>
 </body>
 </html>
