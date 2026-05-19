@@ -373,52 +373,18 @@
       accent-color: var(--brand);
     }
 
-    .upload-box {
+    .photo-note {
       padding: 18px;
       border-radius: 22px;
       background: linear-gradient(135deg, rgba(255, 241, 229, 0.7), rgba(221, 241, 232, 0.72));
       border: 1px dashed rgba(24, 38, 31, 0.16);
-    }
-
-    .upload-box p {
       color: var(--ink-soft);
-      font-size: 0.92rem;
-      margin-top: 6px;
     }
 
-    .preview-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 14px;
-    }
-
-    .preview-grid:empty {
-      display: none;
-    }
-
-    .preview-item {
-      overflow: hidden;
-      border-radius: 18px;
-      border: 1px solid rgba(24, 38, 31, 0.1);
-      background: rgba(255, 255, 255, 0.86);
-    }
-
-    .preview-item img {
-      width: 100%;
-      height: 120px;
-      object-fit: cover;
+    .photo-note strong {
       display: block;
-    }
-
-    .preview-item span {
-      display: block;
-      padding: 10px 12px;
-      color: var(--ink-soft);
-      font-size: 0.84rem;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      color: var(--ink);
+      margin-bottom: 8px;
     }
 
     .helper-copy {
@@ -553,9 +519,6 @@
         position: static;
       }
 
-      .preview-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
     }
 
     @media (max-width: 760px) {
@@ -589,9 +552,6 @@
         width: min(var(--max-width), calc(100% - 20px));
       }
 
-      .preview-grid {
-        grid-template-columns: 1fr;
-      }
     }
   </style>
 </head>
@@ -619,7 +579,7 @@
       <div class="hero-card">
         <div class="eyebrow">Mobile repair request</div>
         <h1>Tell us what happened before we head your way.</h1>
-        <p>Send your contact info, device type, issue details, and photos in one place so Fix It Mobile can review the problem, call you back, and help you decide whether to move forward with the $20 mobile visit deposit.</p>
+        <p>Send your contact info, device type, and issue details in one place so Fix It Mobile can review the problem, call you back, and help you decide whether to move forward with the $20 mobile visit deposit.</p>
         <div class="hero-points">
           <div class="hero-point">
             <div class="point-badge">1</div>
@@ -631,8 +591,8 @@
           <div class="hero-point">
             <div class="point-badge">2</div>
             <div>
-              <strong>Upload damage photos</strong>
-              <span>Cracks, bent ports, back glass, and battery swelling are easier to assess with a photo.</span>
+              <strong>Send photos separately</strong>
+              <span>Customers can text or email damage photos after submitting the request form.</span>
             </div>
           </div>
           <div class="hero-point">
@@ -651,15 +611,15 @@
         <div class="info-stack">
           <div class="info-chip">
             <strong>Best contact method</strong>
-            <span>Email works well for photos, but a cell number makes it easier to call or text back fast.</span>
+            <span>A cell number works best because customers can text photos after submitting the request.</span>
           </div>
           <div class="info-chip">
             <strong>Device model or type</strong>
             <span>iPhone, Samsung, iPad, tablet, or another device category with extra notes if needed.</span>
           </div>
           <div class="info-chip">
-            <strong>Photo attachments</strong>
-            <span>Up to 10MB total based on FormSubmit's file upload limit.</span>
+            <strong>Photos by text or email</strong>
+            <span>Ask customers to send device photos by text or email after they submit the request.</span>
           </div>
         </div>
       </aside>
@@ -672,7 +632,7 @@
           <p>This form emails the request directly to your business inbox. The first time it gets submitted, FormSubmit may send a one-time confirmation email to activate the form for your address.</p>
         </div>
 
-        <form action="https://formsubmit.co/info@fixitmobile.us" method="POST" enctype="multipart/form-data">
+        <form action="https://formsubmit.co/info@fixitmobile.us" method="POST">
           <input type="hidden" name="_subject" value="New Fix It Mobile repair request" />
           <input type="hidden" name="_next" value="https://fixitmobile.us/thanks.html" />
           <input type="hidden" name="_captcha" value="false" />
@@ -752,11 +712,10 @@
           </div>
 
           <div class="stacked-field">
-            <label for="photo-upload">Upload photos <span class="label-note">Optional</span></label>
-            <div class="upload-box">
-              <input id="photo-upload" name="attachment" type="file" accept="image/png,image/jpeg,image/webp" multiple />
-              <p>Upload close photos of the damage or the full device. These files will be sent with the repair request email.</p>
-              <div class="preview-grid" id="preview-grid"></div>
+            <label>Send photos after submitting <span class="label-note">Optional</span></label>
+            <div class="photo-note">
+              <strong>Need to show the damage?</strong>
+              <span>After you send this request, text photos to <a href="sms:+16124242111">(612) 424-2111</a> or email them to <a href="mailto:info@fixitmobile.us">info@fixitmobile.us</a>.</span>
             </div>
           </div>
 
@@ -787,7 +746,7 @@
             <div class="point-badge">1</div>
             <div>
               <strong>Send the form</strong>
-              <span>Get the issue, contact info, and images into your inbox first.</span>
+              <span>Get the issue and contact info into your inbox first.</span>
             </div>
           </div>
           <div class="pay-step">
@@ -826,9 +785,6 @@
     const deviceType = document.getElementById("device-type");
     const otherDeviceWrap = document.getElementById("other-device-wrap");
     const otherDeviceInput = document.getElementById("other-device");
-    const photoUpload = document.getElementById("photo-upload");
-    const previewGrid = document.getElementById("preview-grid");
-
     const syncOtherDeviceField = () => {
       const showOther = deviceType.value === "Other";
       otherDeviceWrap.classList.toggle("hidden", !showOther);
@@ -838,33 +794,7 @@
       }
     };
 
-    const renderPreviews = () => {
-      previewGrid.innerHTML = "";
-      const files = Array.from(photoUpload.files || []);
-
-      files.forEach((file) => {
-        if (!file.type.startsWith("image/")) {
-          return;
-        }
-
-        const preview = document.createElement("div");
-        preview.className = "preview-item";
-
-        const image = document.createElement("img");
-        image.src = URL.createObjectURL(file);
-        image.alt = file.name;
-
-        const label = document.createElement("span");
-        label.textContent = file.name;
-
-        preview.appendChild(image);
-        preview.appendChild(label);
-        previewGrid.appendChild(preview);
-      });
-    };
-
     deviceType.addEventListener("change", syncOtherDeviceField);
-    photoUpload.addEventListener("change", renderPreviews);
     syncOtherDeviceField();
   </script>
 </body>
