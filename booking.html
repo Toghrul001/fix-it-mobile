@@ -92,13 +92,13 @@
     }
 
     .brand-mark {
-      width: 132px;
-      height: 66px;
+      width: 54px;
+      height: 54px;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 8px 10px;
-      border-radius: 18px;
+      padding: 6px;
+      border-radius: 16px;
       overflow: hidden;
       background: rgba(255, 255, 255, 0.96);
       box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
@@ -113,14 +113,20 @@
 
     .brand-copy strong {
       display: block;
-      font-size: 1rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
+      font-size: 1.14rem;
+      letter-spacing: 0.02em;
     }
 
     .brand-copy span {
-      color: rgba(255, 250, 242, 0.74);
-      font-size: 0.86rem;
+      color: rgba(255, 250, 242, 0.8);
+      font-size: 0.82rem;
+    }
+
+    .hero-logo {
+      width: min(100%, 380px);
+      display: block;
+      margin-bottom: 18px;
+      filter: drop-shadow(0 18px 30px rgba(0, 0, 0, 0.28));
     }
 
     .top-actions {
@@ -581,7 +587,7 @@
       <div class="topbar">
         <a class="brand" href="index.html">
           <div class="brand-mark">
-            <img src="assets/main-logo.png" alt="Fix It Mobile logo" />
+            <img src="assets/favicon-v2.png" alt="Fix It Mobile icon" />
           </div>
           <div class="brand-copy">
             <strong>Fix It Mobile</strong>
@@ -599,6 +605,7 @@
   <main class="shell">
     <section class="hero">
       <div class="hero-card">
+        <img class="hero-logo" src="assets/main-logo.png" alt="Fix It Mobile Repair logo" />
         <div class="eyebrow">Mobile repair request</div>
         <h1>Tell us what happened before we head your way.</h1>
         <p>Send your contact info, device type, and issue details in one place so Fix It Mobile can review the problem, call you back, and move you smoothly into the mobile appointment process.</p>
