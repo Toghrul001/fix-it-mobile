@@ -43,16 +43,21 @@
     }
 
     .badge {
-      width: 58px;
-      height: 58px;
+      width: 132px;
+      height: 72px;
       margin: 0 auto 18px;
-      display: grid;
-      place-items: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       border-radius: 18px;
-      background: linear-gradient(135deg, var(--brand), #f2ba63);
-      color: white;
-      font-size: 1.5rem;
-      font-weight: 900;
+      overflow: hidden;
+    }
+
+    .badge img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
     }
 
     h1 {
@@ -99,7 +104,7 @@
 </head>
 <body>
   <div class="card">
-    <div class="badge">F</div>
+    <div class="badge"><img src="assets/main-logo.png" alt="Fix It Mobile logo" /></div>
     <h1>Thanks for your request.</h1>
     <p>We’ll review your device details and get back to you soon with pricing and next steps. If you are ready to reserve your mobile visit now, you can pay the $20 deposit below.</p>
     <div class="button-row">
