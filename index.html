@@ -135,7 +135,7 @@
     }
 
     .hero-logo {
-      width: min(100%, 560px);
+      width: min(100%, 700px);
       display: block;
       margin-bottom: 18px;
       filter: drop-shadow(0 18px 30px rgba(0, 0, 0, 0.28));
@@ -633,6 +633,39 @@
       font-weight: 700;
     }
 
+    .review-cta {
+      margin-top: 24px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .review-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 20px;
+      border-radius: 999px;
+      background: rgba(255, 253, 249, 0.94);
+      border: 1px solid rgba(21, 35, 29, 0.08);
+      box-shadow: 0 18px 36px rgba(52, 42, 24, 0.08);
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .google-badge {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: conic-gradient(#4285f4 0 25%, #34a853 25% 50%, #fbbc05 50% 75%, #ea4335 75% 100%);
+      color: white;
+      font-size: 1.05rem;
+      font-weight: 900;
+      box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.82);
+    }
+
     .contact-card {
       padding: 36px;
       border-radius: 34px;
@@ -1060,6 +1093,12 @@
           <p>"Great repairing service. My wife has been there twice, once for a screen replacement and once for a charging port issue. Highly recommended."</p>
           <span>Yi Liu • Google review</span>
         </article>
+      </div>
+      <div class="review-cta">
+        <a class="review-link" href="https://g.page/r/CfO9KH4AOkYwEBM/review" target="_blank" rel="noopener noreferrer">
+          <span class="google-badge">G</span>
+          <span>Click Here For Review</span>
+        </a>
       </div>
     </section>
 
