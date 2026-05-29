@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Service Policy &amp; Warranty | Fix It Mobile</title>
+  <link rel="icon" type="image/png" href="assets/favicon-v2.png" />
+  <link rel="shortcut icon" href="assets/favicon-v2.png" />
+  <link rel="apple-touch-icon" href="assets/favicon-v2.png" />
+  <style>
+    :root {
+      --bg: #f4eee6;
+      --surface: rgba(255, 253, 249, 0.9);
+      --surface-strong: #fffdf9;
+      --ink: #18261f;
+      --ink-soft: #556159;
+      --line: rgba(24, 38, 31, 0.1);
+      --brand: #d96d3d;
+      --accent: #1d654f;
+      --accent-soft: #ddf1e8;
+      --shadow: 0 24px 60px rgba(50, 38, 23, 0.12);
+      --radius-xl: 34px;
+      --radius-lg: 24px;
+      --radius-md: 18px;
+      --max-width: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(217, 109, 61, 0.16), transparent 28%),
+        radial-gradient(circle at 88% 0%, rgba(29, 101, 79, 0.13), transparent 22%),
+        linear-gradient(180deg, #f8f3eb 0%, #f4eee6 42%, #f7f4ef 100%);
+      font-family: "Avenir Next", "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.14) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.2), transparent 80%);
+      opacity: 0.35;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .shell {
+      width: min(var(--max-width), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 18px 0 0;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 16px 22px;
+      background: rgba(24, 38, 31, 0.9);
+      color: #fffaf2;
+      border: 1px solid rgba(255, 250, 242, 0.12);
+      border-radius: 999px;
+      box-shadow: 0 18px 40px rgba(21, 35, 29, 0.24);
+      backdrop-filter: blur(18px);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      width: 54px;
+      height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6px;
+      border-radius: 16px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.96);
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+    }
+
+    .brand-mark img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .brand-copy strong {
+      display: block;
+      font-size: 1.14rem;
+      letter-spacing: 0.02em;
+    }
+
+    .brand-copy span {
+      color: rgba(255, 250, 242, 0.8);
+      font-size: 0.82rem;
+    }
+
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .top-link {
+      text-decoration: none;
+      color: rgba(255, 250, 242, 0.86);
+      font-size: 0.94rem;
+    }
+
+    .top-call {
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    main {
+      padding: 28px 0 76px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+      gap: 22px;
+      margin-bottom: 26px;
+    }
+
+    .hero-card,
+    .summary-card,
+    .policy-card,
+    .contact-card {
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card {
+      padding: 38px;
+      color: #fff8ee;
+      background:
+        linear-gradient(145deg, rgba(22, 43, 34, 0.96), rgba(28, 74, 57, 0.92) 54%, rgba(217, 109, 61, 0.9)),
+        #183128;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      width: fit-content;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(255, 250, 242, 0.12);
+      border: 1px solid rgba(255, 250, 242, 0.14);
+      color: #fff1de;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.8rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .hero-card h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.7rem, 5vw, 4.6rem);
+      line-height: 0.94;
+      letter-spacing: -0.05em;
+      margin-bottom: 18px;
+    }
+
+    .hero-card p {
+      max-width: 640px;
+      color: rgba(255, 248, 238, 0.88);
+      font-size: 1.06rem;
+      margin-bottom: 18px;
+    }
+
+    .hero-note {
+      padding: 18px 20px;
+      border-radius: 22px;
+      background: rgba(255, 250, 242, 0.12);
+      border: 1px solid rgba(255, 250, 242, 0.12);
+      color: #fff1de;
+      font-weight: 700;
+    }
+
+    .summary-card {
+      padding: 30px;
+      background: rgba(255, 253, 249, 0.88);
+      border: 1px solid var(--line);
+      display: grid;
+      gap: 14px;
+      align-content: start;
+    }
+
+    .summary-card h2,
+    .section-head h2,
+    .policy-card h3,
+    .contact-card h2 {
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .summary-card h2 {
+      font-size: 2rem;
+      line-height: 1;
+    }
+
+    .summary-card p {
+      color: var(--ink-soft);
+    }
+
+    .summary-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .summary-item {
+      padding: 16px 18px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, rgba(221, 241, 232, 0.82), rgba(255, 241, 229, 0.92));
+    }
+
+    .summary-item strong {
+      display: block;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 20px;
+      margin-bottom: 22px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 0.98;
+      letter-spacing: -0.04em;
+    }
+
+    .section-head p {
+      max-width: 620px;
+      color: var(--ink-soft);
+    }
+
+    .policy-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .policy-card {
+      padding: 28px;
+      background: rgba(255, 253, 249, 0.92);
+      border: 1px solid var(--line);
+    }
+
+    .policy-card h3 {
+      font-size: 1.7rem;
+      line-height: 1;
+      margin-bottom: 14px;
+    }
+
+    .policy-card p {
+      color: var(--ink-soft);
+      margin-bottom: 12px;
+    }
+
+    .policy-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .policy-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 8px;
+      padding-left: 20px;
+      color: var(--ink-soft);
+    }
+
+    .policy-list strong {
+      color: var(--ink);
+    }
+
+    .policy-card.wide {
+      grid-column: span 2;
+    }
+
+    .contact-card {
+      margin-top: 26px;
+      padding: 30px;
+      background: linear-gradient(135deg, rgba(255, 253, 249, 0.94), rgba(252, 244, 235, 0.88));
+      border: 1px solid var(--line);
+      text-align: center;
+    }
+
+    .contact-card h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .contact-card p {
+      max-width: 720px;
+      margin: 0 auto 20px;
+      color: var(--ink-soft);
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 800;
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      color: white;
+      background: linear-gradient(135deg, var(--brand), #ef966b);
+      box-shadow: 0 18px 30px rgba(217, 109, 61, 0.28);
+    }
+
+    .button-secondary {
+      color: var(--ink);
+      background: rgba(221, 241, 232, 0.72);
+      border: 1px solid rgba(29, 101, 79, 0.14);
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      font-weight: 700;
+      color: #46554c;
+    }
+
+    footer {
+      padding-top: 18px;
+      text-align: center;
+      color: #607067;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 980px) {
+      .hero,
+      .policy-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .policy-card.wide {
+        grid-column: auto;
+      }
+
+      .section-head {
+        flex-direction: column;
+        align-items: start;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .topbar,
+      .top-actions {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .top-actions {
+        width: 100%;
+      }
+
+      .top-call,
+      .top-link,
+      .button {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .hero-card,
+      .summary-card,
+      .policy-card,
+      .contact-card {
+        padding: 24px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .shell {
+        width: min(var(--max-width), calc(100% - 20px));
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="shell">
+      <div class="topbar">
+        <a class="brand" href="index.html">
+          <div class="brand-mark">
+            <img src="assets/favicon-v2.png" alt="Fix It Mobile icon" />
+          </div>
+          <div class="brand-copy">
+            <strong>Fix It Mobile</strong>
+            <span>Service policy and warranty information</span>
+          </div>
+        </a>
+        <div class="top-actions">
+          <a class="top-link" href="index.html">Back to Home</a>
+          <a class="top-link" href="booking.html">Book Repair</a>
+          <a class="top-call" href="tel:+16124242111">Call (612) 424-2111</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <div class="hero-card">
+        <div class="eyebrow">Service Policy &amp; Warranty</div>
+        <h1>Clear terms, friendly expectations, and honest repair support.</h1>
+        <p>This page explains how Fix It Mobile handles mobile visits, diagnostics, repair approval, warranty coverage, and service scheduling so customers know what to expect before the appointment.</p>
+        <div class="hero-note">We keep the process straightforward: review the request, explain the repair options, confirm approval before major work, and stand behind qualifying replacement parts.</div>
+      </div>
+
+      <aside class="summary-card">
+        <h2>Quick summary</h2>
+        <p>These highlights cover the most common questions customers ask before a mobile repair visit.</p>
+        <div class="summary-list">
+          <div class="summary-item">
+            <strong>Mobile visit fees are explained clearly</strong>
+            <span>A $20 mobile diagnostic or visit fee may apply when a repair is declined after arrival or the device is not repairable.</span>
+          </div>
+          <div class="summary-item">
+            <strong>Major work requires approval</strong>
+            <span>We provide a quote before major repairs are completed, and we do not move forward without customer approval.</span>
+          </div>
+          <div class="summary-item">
+            <strong>Warranty is limited to qualifying defects</strong>
+            <span>Replacement parts are covered for manufacturer defects only, with additional screen and battery details listed below.</span>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Service policies for mobile repair.</h2>
+        <p>Our goal is to keep every repair request professional, customer-friendly, and easy to understand. These policies help set clear expectations before the visit begins.</p>
+      </div>
+
+      <div class="policy-grid">
+        <article class="policy-card">
+          <h3>Mobile Diagnostic / Visit Fee</h3>
+          <p>A $20 mobile diagnostic or visit fee may apply if the customer declines the repair after arrival or if the device cannot be repaired.</p>
+          <p>If the repair is completed, the fee is applied toward the final repair cost.</p>
+          <p>This fee helps cover travel time, inspection, and scheduling.</p>
+        </article>
+
+        <article class="policy-card">
+          <h3>Water Damage Diagnostic</h3>
+          <p>Water damage diagnostics are $40.</p>
+          <p>Water damage diagnostics require additional labor, including device disassembly, inspection, board cleaning, and troubleshooting.</p>
+          <p>The diagnostic fee is non-refundable because of the labor and time involved.</p>
+          <p>Repair success cannot be guaranteed for liquid-damaged devices.</p>
+        </article>
+
+        <article class="policy-card">
+          <h3>Repair Approval Policy</h3>
+          <ul class="policy-list">
+            <li>Customers receive a quote before major repairs are completed.</li>
+            <li>No major repair work is completed without customer approval.</li>
+            <li>Some parts may require special ordering depending on availability.</li>
+          </ul>
+        </article>
+
+        <article class="policy-card">
+          <h3>Warranty Policy</h3>
+          <p>Repairs include a limited warranty covering manufacturer defects on replacement parts only.</p>
+          <p>Warranty does not cover:</p>
+          <ul class="policy-list">
+            <li>physical damage</li>
+            <li>cracked glass</li>
+            <li>drops</li>
+            <li>bent frames</li>
+            <li>liquid damage</li>
+            <li>pressure damage</li>
+            <li>scratches</li>
+            <li>customer-caused damage</li>
+            <li>unrelated device issues</li>
+          </ul>
+        </article>
+
+        <article class="policy-card wide">
+          <h3>Screen Repair Warranty</h3>
+          <p>Screen repairs include a limited lifetime warranty against manufacturer defects only.</p>
+          <p>Warranty does not cover:</p>
+          <ul class="policy-list">
+            <li>cracked screens</li>
+            <li>blacked-out OLED or LCD displays</li>
+            <li>green, white, or purple lines</li>
+            <li>dead pixels caused by impact</li>
+            <li>touch issues caused by drops or pressure</li>
+            <li>pressure spots</li>
+            <li>frame damage</li>
+            <li>liquid damage</li>
+            <li>deep scratches</li>
+            <li>impact damage after repair</li>
+          </ul>
+          <p>OLED and LCD screens are sensitive electronic components and may fail from drops or pressure even if the outer glass is not cracked.</p>
+          <p>Any signs of impact or physical damage void the screen warranty.</p>
+        </article>
+
+        <article class="policy-card">
+          <h3>Battery Warranty</h3>
+          <p>Battery warranty covers manufacturer defects only.</p>
+          <p>Warranty does not cover:</p>
+          <ul class="policy-list">
+            <li>liquid damage</li>
+            <li>charging port problems</li>
+            <li>motherboard or power IC issues</li>
+            <li>swelling caused by damage</li>
+            <li>customer damage</li>
+            <li>bad charging accessories</li>
+          </ul>
+        </article>
+
+        <article class="policy-card">
+          <h3>Mobile Service Notice</h3>
+          <p>Fix It Mobile Repair provides mobile service to homes, offices, and public locations.</p>
+          <p>Customers must provide a safe and accessible repair location.</p>
+          <p>Arrival times may vary depending on traffic, weather, parts availability, and previous appointments.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact-card">
+      <h2>Questions before booking?</h2>
+      <p>If you want to clarify a repair, ask about warranty coverage, or confirm whether your device needs a mobile diagnostic visit, contact Fix It Mobile before scheduling.</p>
+      <div class="contact-actions">
+        <a class="button button-primary" href="booking.html">Send Repair Request</a>
+        <a class="button button-secondary" href="tel:+16124242111">Call (612) 424-2111</a>
+        <a class="button button-secondary" href="mailto:info@fixitmobile.us">Email info@fixitmobile.us</a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-links">
+        <a href="service-policy.html">Service Policy &amp; Warranty</a>
+        <a href="booking.html">Book Repair</a>
+        <a href="mailto:info@fixitmobile.us">info@fixitmobile.us</a>
+      </div>
+      <p>&copy; 2026 Fix It Mobile Phone Repair. All rights reserved.</p>
+    </footer>
+  </main>
+</body>
+</html>

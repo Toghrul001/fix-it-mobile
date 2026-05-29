@@ -408,6 +408,21 @@
       font-size: 0.9rem;
     }
 
+    .policy-notice {
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: rgba(221, 241, 232, 0.48);
+      border: 1px solid rgba(29, 101, 79, 0.14);
+      color: var(--ink-soft);
+      font-size: 0.9rem;
+    }
+
+    .policy-notice a {
+      color: var(--accent);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
     .form-status {
       min-height: 24px;
       color: var(--ink-soft);
@@ -506,6 +521,12 @@
       font-size: 0.9rem;
     }
 
+    .deposit-note a {
+      color: var(--accent);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
     .alt-contact {
       margin-top: 22px;
       padding-top: 20px;
@@ -525,6 +546,20 @@
 
     .hidden {
       display: none;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      font-weight: 700;
+      color: #46554c;
     }
 
     footer {
@@ -614,7 +649,7 @@
             <div class="point-badge">1</div>
             <div>
               <strong>Send the details first</strong>
-              <span>Customers can describe the issue before they commit to the visit fee.</span>
+              <span>Share the issue, device type, and location so we can review everything before we call you back.</span>
             </div>
           </div>
           <div class="hero-point">
@@ -627,8 +662,8 @@
           <div class="hero-point">
             <div class="point-badge">3</div>
             <div>
-              <strong>Confirm the appointment</strong>
-              <span>After sending the request, customers can pay the mobile diagnostic fee to lock in the visit.</span>
+              <strong>We follow up clearly</strong>
+              <span>After reviewing your request, we reach out with availability, pricing, and the best next step for service.</span>
             </div>
           </div>
         </div>
@@ -659,7 +694,7 @@
         <div class="form-intro">
           <h2>Send a repair request</h2>
           <p>Mobile phone and tablet repair service across the Twin Cities. We come directly to your home, office, or location for fast and professional repairs.</p>
-          <p>This form is set up for Formspree so customers can send repair requests without hitting the old FormSubmit activation and host-error pages.</p>
+          <p>Share the basics here, and we will follow up with availability, pricing, and the best next step for your repair.</p>
         </div>
 
         <form id="repair-form" action="https://formspree.io/f/xojbjazk" method="POST" novalidate>
@@ -767,9 +802,10 @@
           </div>
 
           <div class="button-row">
-            <button class="button button-primary" type="submit">Submit Repair Request</button>
+              <button class="button button-primary" type="submit">Send Repair Request</button>
           </div>
-          <p class="helper-copy">After reviewing your request, we’ll contact you with availability, pricing, and next steps.</p>
+          <p class="policy-notice">By submitting a repair request, you agree to our <a href="service-policy.html">Service Policy &amp; Warranty</a> terms. A $20 mobile diagnostic fee may apply if repair is declined or the device is not repairable. Water damage diagnostics are $40.</p>
+          <p class="helper-copy">After reviewing your request, we'll contact you with availability, pricing, and next steps.</p>
           <p class="form-status" id="form-status"></p>
         </form>
       </div>
@@ -779,8 +815,8 @@
         <p>Once you submit the repair request, Fix It Mobile will review the issue details and follow up with availability, pricing, and the next step for service.</p>
 
         <div class="deposit-box">
-          <strong>Simple mobile service process</strong>
-          <span>Customers can send the request first, then get clear follow-up before any appointment is confirmed.</span>
+          <strong>Clear follow-up before service</strong>
+          <span>We review your request first so you know your options before any visit is scheduled.</span>
         </div>
 
         <div class="pay-list">
@@ -794,30 +830,36 @@
           <div class="pay-step">
             <div class="point-badge">2</div>
             <div>
-              <strong>Review or call back</strong>
-              <span>Decide whether to quote, answer questions, or move to an appointment.</span>
+              <strong>We review the details</strong>
+              <span>We check the device issue, location, and service notes so we can respond clearly.</span>
             </div>
           </div>
           <div class="pay-step">
             <div class="point-badge">3</div>
             <div>
-              <strong>Confirm the next step</strong>
-              <span>You can reply with pricing, availability, and the best option for moving forward.</span>
+              <strong>We contact you</strong>
+              <span>You receive availability, pricing, and the best option for moving forward.</span>
             </div>
           </div>
         </div>
 
-        <p class="deposit-note">After reviewing your request, we’ll contact you with availability, pricing, and next steps.</p>
+        <p class="deposit-note">After reviewing your request, we'll contact you with availability, pricing, and next steps.</p>
 
         <div class="alt-contact">
           <strong>Need to talk first?</strong>
           <p>Customers can still call or text if they are not ready to fill out the form.</p>
           <a href="tel:+16124242111">(612) 424-2111</a>
+          <p class="deposit-note"><a href="service-policy.html">View the full Service Policy &amp; Warranty</a></p>
         </div>
       </aside>
     </section>
 
     <footer>
+      <div class="footer-links">
+        <a href="service-policy.html">Service Policy &amp; Warranty</a>
+        <a href="index.html">Back to Home</a>
+        <a href="mailto:info@fixitmobile.us">info@fixitmobile.us</a>
+      </div>
       <p>&copy; 2026 Fix It Mobile Phone Repair. All rights reserved.</p>
     </footer>
   </main>
