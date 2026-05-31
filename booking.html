@@ -822,6 +822,36 @@
             <input id="location-note" name="Location notes" type="text" placeholder="Apartment gate code, office suite, parking instructions..." />
           </div>
 
+          <div class="field-grid">
+            <div class="field">
+              <label for="preferred-date">Preferred day <span class="label-note">Optional</span></label>
+              <input id="preferred-date" name="Preferred day" type="date" />
+            </div>
+            <div class="field">
+              <label for="preferred-window">Preferred time window <span class="label-note">Optional</span></label>
+              <select id="preferred-window" name="Preferred time window">
+                <option value="">Choose one</option>
+                <option>Morning</option>
+                <option>Afternoon</option>
+                <option>Evening</option>
+                <option>Flexible</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field-grid">
+            <div class="field">
+              <label for="preferred-time">Preferred exact time <span class="label-note">Optional</span></label>
+              <input id="preferred-time" name="Preferred exact time" type="time" />
+            </div>
+            <div class="field">
+              <label for="schedule-note">Scheduling note <span class="label-note">Optional</span></label>
+              <input id="schedule-note" name="Scheduling note" type="text" placeholder="Any time after 3 PM, lunch break only, before 6 PM..." />
+            </div>
+          </div>
+
+          <p class="helper-copy">Tell us your preferred day or time if you have one. We will contact you to confirm availability before we stop by.</p>
+
           <div class="button-row">
               <button class="button button-primary" type="submit">Send Repair Request</button>
           </div>
