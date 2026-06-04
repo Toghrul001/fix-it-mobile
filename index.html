@@ -155,16 +155,16 @@
       right: 18px;
       bottom: 18px;
       width: min(42%, 230px);
-      padding: 12px 14px;
-      border-radius: 18px;
-      background: rgba(255, 253, 249, 0.94);
-      box-shadow: 0 18px 30px rgba(0, 0, 0, 0.18);
+      padding: 0;
+      background: transparent;
+      box-shadow: none;
     }
 
     .hero-badge img {
       width: 100%;
       display: block;
       object-fit: contain;
+      filter: drop-shadow(0 14px 24px rgba(0, 0, 0, 0.28));
     }
 
     nav {
@@ -901,6 +901,18 @@
       .hero {
         border-radius: 30px;
         padding: 22px;
+      }
+
+      .hero-photo {
+        aspect-ratio: 4 / 3;
+        border-radius: 22px;
+      }
+
+      .hero-badge {
+        right: 12px;
+        bottom: 12px;
+        width: min(46%, 170px);
+        padding: 0;
       }
 
       .hero-actions,

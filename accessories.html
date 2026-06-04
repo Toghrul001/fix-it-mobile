@@ -246,78 +246,17 @@
       min-height: 360px;
       position: relative;
       border-radius: 32px;
-      background:
-        radial-gradient(circle at 22% 20%, rgba(217, 109, 61, 0.24), transparent 20%),
-        radial-gradient(circle at 78% 16%, rgba(31, 106, 82, 0.24), transparent 22%),
-        linear-gradient(155deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+      background: linear-gradient(155deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
       border: 1px solid rgba(255, 255, 255, 0.12);
       overflow: hidden;
       box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
     }
 
-    .visual-ipad,
-    .visual-iphone {
-      position: absolute;
-      background: linear-gradient(160deg, #0d1613, #21372f 80%);
-      box-shadow: 0 28px 40px rgba(0, 0, 0, 0.24);
-    }
-
-    .visual-ipad {
-      inset: 52px 122px 42px 48px;
-      border-radius: 34px;
-      transform: rotate(-7deg);
-    }
-
-    .visual-iphone {
-      width: 168px;
-      height: 288px;
-      right: 34px;
-      bottom: 24px;
-      border-radius: 28px;
-      transform: rotate(8deg);
-      z-index: 2;
-    }
-
-    .visual-ipad::before,
-    .visual-iphone::before {
-      content: "";
-      position: absolute;
-      inset: 14px;
-      border-radius: 24px;
-      background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.03)),
-        linear-gradient(145deg, #f5fbf9, #d7ece4 70%, #c7ded5);
-    }
-
-    .visual-iphone::before {
-      border-radius: 20px;
-    }
-
-    .visual-ipad::after {
-      content: "";
-      position: absolute;
-      top: 108px;
-      left: 56px;
-      width: 156px;
-      height: 2px;
-      background: rgba(21, 35, 29, 0.18);
-      transform: rotate(-28deg);
-      box-shadow:
-        20px 16px 0 rgba(21, 35, 29, 0.13),
-        42px -18px 0 rgba(21, 35, 29, 0.13),
-        78px 18px 0 rgba(21, 35, 29, 0.13);
-    }
-
-    .visual-iphone::after {
-      content: "";
-      position: absolute;
-      top: 10px;
-      left: 50%;
-      width: 66px;
-      height: 7px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.18);
-      transform: translateX(-50%);
+    .hero-visual img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
     }
 
     .visual-shield {
@@ -434,10 +373,8 @@
       position: relative;
       border-radius: 28px;
       overflow: hidden;
-      background:
-        linear-gradient(145deg, rgba(21, 35, 29, 0.98), rgba(29, 53, 44, 0.92)),
-        #15231d;
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+      background: #15231d;
+      box-shadow: 0 20px 36px rgba(43, 34, 21, 0.14);
     }
 
     .concept-panel::before {
@@ -448,67 +385,11 @@
       border: 1px solid rgba(255, 255, 255, 0.08);
     }
 
-    .concept-phone-left,
-    .concept-phone-right {
-      position: absolute;
-      width: 180px;
-      height: 280px;
-      border-radius: 28px;
-      background: linear-gradient(160deg, #0d1613, #22362f 78%);
-      box-shadow: 0 22px 34px rgba(0, 0, 0, 0.28);
-    }
-
-    .concept-phone-left {
-      left: 34px;
-      top: 42px;
-      transform: rotate(-10deg);
-    }
-
-    .concept-phone-right {
-      right: 34px;
-      top: 34px;
-      transform: rotate(8deg);
-    }
-
-    .concept-phone-left::before,
-    .concept-phone-right::before {
-      content: "";
-      position: absolute;
-      inset: 14px;
-      border-radius: 22px;
-      background: linear-gradient(145deg, #eef8f4, #d7ece4 72%, #c6ddd4);
-    }
-
-    .concept-phone-left::after {
-      content: "";
-      position: absolute;
-      top: 96px;
-      left: 28px;
-      width: 108px;
-      height: 2px;
-      background: rgba(21, 35, 29, 0.18);
-      transform: rotate(-30deg);
-      box-shadow:
-        16px 16px 0 rgba(21, 35, 29, 0.14),
-        36px -12px 0 rgba(21, 35, 29, 0.14);
-    }
-
-    .concept-shield {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      width: 110px;
-      height: 110px;
-      border-radius: 28px;
-      background: linear-gradient(135deg, var(--brand), #ef966b);
-      color: white;
-      display: grid;
-      place-items: center;
-      font-size: 2rem;
-      font-weight: 800;
-      transform: translate(-50%, -50%);
-      box-shadow: 0 18px 30px rgba(217, 109, 61, 0.22);
-      border: 6px solid rgba(255, 253, 249, 0.18);
+    .concept-panel img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
     }
 
     .concept-copy h2 {
@@ -653,37 +534,6 @@
         min-height: 280px;
       }
 
-      .visual-ipad {
-        inset: 42px 92px 34px 28px;
-      }
-
-      .visual-iphone {
-        width: 134px;
-        height: 236px;
-        right: 24px;
-        bottom: 20px;
-      }
-
-      .concept-phone-left,
-      .concept-phone-right {
-        width: 136px;
-        height: 224px;
-      }
-
-      .concept-phone-left {
-        left: 20px;
-      }
-
-      .concept-phone-right {
-        right: 20px;
-      }
-
-      .concept-shield {
-        width: 88px;
-        height: 88px;
-        font-size: 1.6rem;
-      }
-
       .why-grid {
         grid-template-columns: 1fr;
       }
@@ -734,8 +584,7 @@
         </div>
       </div>
       <div class="hero-visual" aria-hidden="true">
-        <div class="visual-ipad"></div>
-        <div class="visual-iphone"></div>
+        <img src="assets/accessories-screen-protector.png" alt="" />
         <div class="visual-shield">+</div>
       </div>
     </section>
@@ -805,9 +654,7 @@
 
     <section class="section-card split-card">
       <div class="concept-panel" aria-hidden="true">
-        <div class="concept-phone-left"></div>
-        <div class="concept-phone-right"></div>
-        <div class="concept-shield">&#128737;</div>
+        <img src="assets/accessories-protection-comparison.png" alt="" />
       </div>
       <div class="concept-copy">
         <h2>Protection that makes the repair feel complete.</h2>
