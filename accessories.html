@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accessories & Protection | Fix It Mobile</title>
+  <link rel="icon" type="image/png" href="assets/favicon-v2.png" />
+  <link rel="shortcut icon" href="assets/favicon-v2.png" />
+  <link rel="apple-touch-icon" href="assets/favicon-v2.png" />
+  <style>
+    :root {
+      --bg: #f3efe7;
+      --surface: rgba(255, 253, 249, 0.94);
+      --ink: #15231d;
+      --ink-soft: #46554c;
+      --brand: #d96d3d;
+      --accent: #1f6a52;
+      --shadow: 0 24px 60px rgba(43, 34, 21, 0.14);
+      --radius-xl: 32px;
+      --radius-lg: 24px;
+      --radius-sm: 16px;
+      --max-width: 1160px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(217, 109, 61, 0.18), transparent 26%),
+        radial-gradient(circle at 85% 10%, rgba(31, 106, 82, 0.14), transparent 24%),
+        linear-gradient(180deg, #f8f2e9 0%, #f4eee6 34%, #f7f4ef 100%);
+      font-family: "Avenir Next", "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+
+    .shell {
+      width: min(var(--max-width), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 18px 0 0;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 16px 22px;
+      background: rgba(21, 35, 29, 0.88);
+      color: #fffaf2;
+      border: 1px solid rgba(255, 250, 242, 0.12);
+      border-radius: 999px;
+      box-shadow: 0 18px 40px rgba(21, 35, 29, 0.24);
+      backdrop-filter: blur(18px);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      width: 54px;
+      height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6px;
+      border-radius: 16px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.96);
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.16);
+    }
+
+    .brand-mark img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .brand-copy strong {
+      display: block;
+      font-size: 1.16rem;
+    }
+
+    .brand-copy span {
+      color: rgba(255, 250, 242, 0.8);
+      font-size: 0.82rem;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 18px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: rgba(255, 250, 242, 0.84);
+      font-size: 0.94rem;
+    }
+
+    nav a:hover,
+    nav a:focus-visible {
+      color: #ffffff;
+    }
+
+    .call-chip {
+      white-space: nowrap;
+      text-decoration: none;
+      color: white;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      font-weight: 700;
+    }
+
+    main {
+      padding: 28px 0 80px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+      gap: 26px;
+      padding: 38px;
+      border-radius: 42px;
+      background:
+        linear-gradient(140deg, rgba(21, 35, 29, 0.96), rgba(19, 49, 40, 0.92) 48%, rgba(217, 109, 61, 0.9)),
+        #1a2a24;
+      color: #fff8ee;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      width: fit-content;
+      padding: 10px 16px;
+      margin-bottom: 18px;
+      border-radius: 999px;
+      background: rgba(255, 250, 242, 0.14);
+      border: 1px solid rgba(255, 250, 242, 0.18);
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
+    .hero h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      color: rgba(255, 248, 238, 0.82);
+      max-width: 58ch;
+      font-size: 1.05rem;
+    }
+
+    .hero-art {
+      min-height: 320px;
+      position: relative;
+      border-radius: 32px;
+      background:
+        radial-gradient(circle at 24% 20%, rgba(217, 109, 61, 0.24), transparent 20%),
+        radial-gradient(circle at 82% 18%, rgba(31, 106, 82, 0.24), transparent 22%),
+        linear-gradient(155deg, rgba(255,255,255,0.1), rgba(255,255,255,0.02));
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      overflow: hidden;
+    }
+
+    .hero-art::before {
+      content: "";
+      position: absolute;
+      inset: 22px 58px 22px 58px;
+      border-radius: 34px;
+      background: linear-gradient(160deg, #0d1613, #21372f 78%);
+      transform: rotate(-7deg);
+      box-shadow: 0 28px 40px rgba(0, 0, 0, 0.24);
+    }
+
+    .hero-art::after {
+      content: "";
+      position: absolute;
+      inset: 42px 76px 42px 76px;
+      border-radius: 26px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.03)),
+        linear-gradient(145deg, #f5fbf9, #d7ece4 70%, #c7ded5);
+      transform: rotate(-7deg);
+    }
+
+    .art-chip,
+    .art-chip-alt {
+      position: absolute;
+      padding: 10px 14px;
+      border-radius: 16px;
+      background: rgba(255, 253, 249, 0.96);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.16);
+      color: var(--ink);
+      font-weight: 800;
+      font-size: 0.88rem;
+    }
+
+    .art-chip {
+      top: 30px;
+      right: 24px;
+    }
+
+    .art-chip-alt {
+      bottom: 28px;
+      left: 24px;
+    }
+
+    .section-card {
+      margin-top: 28px;
+      padding: 36px;
+      border-radius: var(--radius-xl);
+      background: var(--surface);
+      border: 1px solid rgba(21, 35, 29, 0.08);
+      box-shadow: var(--shadow);
+    }
+
+    .section-card h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .section-card > p {
+      color: var(--ink-soft);
+      max-width: 60ch;
+      margin-bottom: 24px;
+      font-size: 1rem;
+    }
+
+    .product-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(260px, 0.95fr);
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .feature-card,
+    .price-card {
+      padding: 28px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, rgba(255, 253, 249, 0.96), rgba(247, 241, 233, 0.9));
+      border: 1px solid rgba(21, 35, 29, 0.08);
+    }
+
+    .price-tag {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--brand), #ef966b);
+      color: white;
+      font-weight: 800;
+      box-shadow: 0 16px 30px rgba(217, 109, 61, 0.2);
+      margin-bottom: 18px;
+    }
+
+    .feature-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .feature-item {
+      display: grid;
+      grid-template-columns: 36px 1fr;
+      gap: 12px;
+      align-items: start;
+    }
+
+    .feature-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: rgba(31, 106, 82, 0.1);
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    .feature-item span,
+    .price-card p {
+      color: var(--ink-soft);
+    }
+
+    .cta-box {
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(21, 35, 29, 0.08);
+    }
+
+    .cta-box strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: 800;
+      text-decoration: none;
+      transition: transform 160ms ease;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      color: white;
+      background: linear-gradient(135deg, var(--brand), #ef966b);
+      box-shadow: 0 18px 30px rgba(217, 109, 61, 0.2);
+    }
+
+    .button-secondary {
+      color: var(--ink);
+      background: rgba(221, 241, 232, 0.72);
+      border: 1px solid rgba(29, 101, 79, 0.14);
+    }
+
+    footer {
+      margin-top: 28px;
+      text-align: center;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      font-weight: 700;
+      color: #46554c;
+    }
+
+    @media (max-width: 960px) {
+      .hero,
+      .product-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .topbar,
+      nav {
+        flex-direction: column;
+      }
+
+      .hero,
+      .section-card {
+        padding: 24px;
+      }
+
+      .hero-art {
+        min-height: 260px;
+      }
+
+      .hero-art::before {
+        inset: 24px 50px;
+      }
+
+      .hero-art::after {
+        inset: 42px 68px;
+      }
+
+      .button,
+      .call-chip {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="shell">
+    <div class="topbar">
+      <div class="brand">
+        <div class="brand-mark">
+          <img src="assets/favicon-v2.png" alt="Fix It Mobile icon" />
+        </div>
+        <div class="brand-copy">
+          <strong>Fix It Mobile</strong>
+          <span>On-site phone repair across the Twin Cities</span>
+        </div>
+      </div>
+      <nav>
+        <a href="index.html#home">Home</a>
+        <a href="index.html#services">Services</a>
+        <a href="booking.html">Book</a>
+        <a href="accessories.html">Accessories</a>
+        <a href="index.html#areas">Areas</a>
+        <a href="index.html#reviews">Reviews</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <a class="call-chip" href="tel:+16124242111">Call Now</a>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Accessories &amp; Protection</div>
+        <h1>Protect your screen before the next drop.</h1>
+        <p>Fix It Mobile offers premium tempered glass screen protectors with professional installation, so your device leaves the appointment better protected than when we arrived.</p>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-chip">Tempered Glass</div>
+        <div class="art-chip-alt">Installed During Visit</div>
+      </div>
+    </section>
+
+    <section class="section-card">
+      <h2>Premium Tempered Glass Screen Protectors</h2>
+      <p>Protect your device with a professionally installed tempered glass screen protector for iPhones and many iPad models.</p>
+      <div class="product-layout">
+        <div class="feature-card">
+          <div class="price-tag">$29.99 Installed</div>
+          <div class="feature-list">
+            <div class="feature-item">
+              <div class="feature-icon">📱</div>
+              <span>iPhone screen protectors</span>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">▭</div>
+              <span>iPad screen protectors from $39.99 installed</span>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">12.9</div>
+              <span>12.9-inch iPad screen protectors from $49.99 installed</span>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">👁</div>
+              <span>Privacy screen protectors</span>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">🛡</div>
+              <span>Tempered glass protection</span>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">✓</div>
+              <span>Professional installation included</span>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">🚗</div>
+              <span>Installed during repair visits when available</span>
+            </div>
+          </div>
+        </div>
+        <div class="price-card">
+          <h3>Easy add-on during your appointment</h3>
+          <p>You do not need a separate trip or extra appointment. Just ask for a screen protector when you book, reply to your confirmation, or mention it when we arrive.</p>
+          <p>Standard iPhone protectors are $29.99 installed, most iPad protectors are $39.99 installed, and 12.9-inch iPad protectors are $49.99 installed.</p>
+          <div class="cta-box">
+            <strong>Call/Text (612) 424-2111 or request it during your repair appointment.</strong>
+            <div class="button-row">
+              <a class="button button-primary" href="tel:+16124242111">Call/Text Now</a>
+              <a class="button button-secondary" href="booking.html">Request a Repair</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-links">
+        <a href="accessories.html">Accessories</a>
+        <a href="service-policy.html">Service Policy &amp; Warranty</a>
+        <a href="booking.html">Book Repair</a>
+        <a href="mailto:info@fixitmobile.us">info@fixitmobile.us</a>
+      </div>
+      <p>&copy; 2026 Fix It Mobile Phone Repair. All rights reserved.</p>
+    </footer>
+  </main>
+</body>
+</html>
