@@ -255,56 +255,72 @@
       box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
     }
 
-    .hero-visual::before {
-      content: "";
+    .visual-ipad,
+    .visual-iphone {
       position: absolute;
-      inset: 34px 112px 54px 72px;
-      border-radius: 36px;
       background: linear-gradient(160deg, #0d1613, #21372f 80%);
-      transform: rotate(-8deg);
       box-shadow: 0 28px 40px rgba(0, 0, 0, 0.24);
     }
 
-    .hero-visual::after {
+    .visual-ipad {
+      inset: 52px 122px 42px 48px;
+      border-radius: 34px;
+      transform: rotate(-7deg);
+    }
+
+    .visual-iphone {
+      width: 168px;
+      height: 288px;
+      right: 34px;
+      bottom: 24px;
+      border-radius: 28px;
+      transform: rotate(8deg);
+      z-index: 2;
+    }
+
+    .visual-ipad::before,
+    .visual-iphone::before {
       content: "";
       position: absolute;
-      inset: 54px 130px 72px 90px;
-      border-radius: 28px;
+      inset: 14px;
+      border-radius: 24px;
       background:
         linear-gradient(180deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.03)),
         linear-gradient(145deg, #f5fbf9, #d7ece4 70%, #c7ded5);
-      transform: rotate(-8deg);
     }
 
-    .visual-screen {
-      position: absolute;
-      inset: 74px 148px 92px 108px;
-      border-radius: 24px;
-      background:
-        linear-gradient(140deg, rgba(255,255,255,0.8), rgba(255,255,255,0.28)),
-        linear-gradient(160deg, #e5f1ec, #f7fbf9);
-      transform: rotate(-8deg);
-      border: 2px solid rgba(255, 255, 255, 0.5);
-      box-shadow: inset 0 0 0 1px rgba(21, 35, 29, 0.06);
+    .visual-iphone::before {
+      border-radius: 20px;
     }
 
-    .visual-crack {
+    .visual-ipad::after {
+      content: "";
       position: absolute;
-      top: 128px;
-      left: 92px;
-      width: 116px;
+      top: 108px;
+      left: 56px;
+      width: 156px;
       height: 2px;
-      background: rgba(21, 35, 29, 0.16);
-      transform: rotate(-36deg);
+      background: rgba(21, 35, 29, 0.18);
+      transform: rotate(-28deg);
       box-shadow:
-        18px 12px 0 rgba(21, 35, 29, 0.12),
-        38px -18px 0 rgba(21, 35, 29, 0.12),
-        56px 14px 0 rgba(21, 35, 29, 0.12);
+        20px 16px 0 rgba(21, 35, 29, 0.13),
+        42px -18px 0 rgba(21, 35, 29, 0.13),
+        78px 18px 0 rgba(21, 35, 29, 0.13);
     }
 
-    .visual-shield,
-    .visual-badge,
-    .visual-logo {
+    .visual-iphone::after {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      width: 66px;
+      height: 7px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.18);
+      transform: translateX(-50%);
+    }
+
+    .visual-shield {
       position: absolute;
       padding: 10px 14px;
       border-radius: 16px;
@@ -318,25 +334,6 @@
     .visual-shield {
       top: 26px;
       right: 24px;
-    }
-
-    .visual-badge {
-      bottom: 78px;
-      left: 24px;
-    }
-
-    .visual-logo {
-      bottom: 24px;
-      right: 22px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .visual-logo img {
-      width: 24px;
-      height: 24px;
-      object-fit: contain;
     }
 
     .section-card {
@@ -656,16 +653,15 @@
         min-height: 280px;
       }
 
-      .hero-visual::before {
-        inset: 34px 98px 56px 44px;
+      .visual-ipad {
+        inset: 42px 92px 34px 28px;
       }
 
-      .hero-visual::after {
-        inset: 52px 116px 74px 62px;
-      }
-
-      .visual-screen {
-        inset: 70px 132px 90px 78px;
+      .visual-iphone {
+        width: 134px;
+        height: 236px;
+        right: 24px;
+        bottom: 20px;
       }
 
       .concept-phone-left,
@@ -738,14 +734,9 @@
         </div>
       </div>
       <div class="hero-visual" aria-hidden="true">
-        <div class="visual-crack"></div>
-        <div class="visual-screen"></div>
+        <div class="visual-ipad"></div>
+        <div class="visual-iphone"></div>
         <div class="visual-shield">+</div>
-        <div class="visual-badge">Cracked Screen / Protected Screen</div>
-        <div class="visual-logo">
-          <img src="assets/favicon-v2.png" alt="" />
-          <span>FIX IT Mobile</span>
-        </div>
       </div>
     </section>
 

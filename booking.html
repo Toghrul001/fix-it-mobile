@@ -122,11 +122,37 @@
       font-size: 0.82rem;
     }
 
-    .hero-logo {
+    .hero-media {
+      position: relative;
       width: min(100%, 620px);
-      display: block;
       margin-bottom: 18px;
-      filter: drop-shadow(0 18px 30px rgba(0, 0, 0, 0.28));
+    }
+
+    .hero-photo {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      display: block;
+      object-fit: cover;
+      border-radius: 28px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 22px 40px rgba(0, 0, 0, 0.24);
+    }
+
+    .hero-badge {
+      position: absolute;
+      left: 18px;
+      bottom: 18px;
+      width: min(42%, 220px);
+      padding: 12px 14px;
+      border-radius: 18px;
+      background: rgba(255, 253, 249, 0.94);
+      box-shadow: 0 18px 30px rgba(0, 0, 0, 0.18);
+    }
+
+    .hero-badge img {
+      width: 100%;
+      display: block;
+      object-fit: contain;
     }
 
     .top-actions {
@@ -662,7 +688,12 @@
   <main class="shell">
     <section class="hero">
       <div class="hero-card">
-        <img class="hero-logo" src="assets/main-logo.png" alt="Fix It Mobile Repair logo" />
+        <div class="hero-media">
+          <img class="hero-photo" src="assets/booking-cracked-iphone.png" alt="Cracked iPhone ready for repair service" />
+          <div class="hero-badge">
+            <img src="assets/main-logo.png" alt="Fix It Mobile Repair logo" />
+          </div>
+        </div>
         <div class="eyebrow">Mobile repair request</div>
         <h1>Tell us what happened before we head your way.</h1>
         <p>Send your contact info, device type, and issue details in one place so Fix It Mobile can review the problem, call you back, and move you smoothly into the mobile appointment process.</p>
