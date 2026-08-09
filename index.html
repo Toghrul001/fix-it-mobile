@@ -825,12 +825,15 @@
     }
 
     .area-pill {
+      display: inline-flex;
+      align-items: center;
       padding: 12px 18px;
       border-radius: 999px;
       background: white;
       border: 1px solid rgba(21, 35, 29, 0.08);
       box-shadow: 0 12px 24px rgba(52, 42, 24, 0.06);
       font-weight: 800;
+      text-decoration: none;
     }
 
     .review-grid {
@@ -1145,11 +1148,12 @@
         <nav>
           <a href="#home">Home</a>
           <a href="#services">Services</a>
+          <a href="pricing/">Pricing</a>
           <a href="booking.html">Book</a>
           <a href="accessories.html">Accessories</a>
           <a href="#areas">Areas</a>
           <a href="#reviews">Reviews</a>
-          <a href="#contact">Contact</a>
+          <a href="contact/">Contact</a>
         </nav>
         <a class="call-chip" href="tel:+16124242111">Call Now</a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open navigation menu">
@@ -1180,11 +1184,12 @@
     <nav class="drawer-nav">
       <a href="#home" data-drawer-link>Home</a>
       <a href="#services" data-drawer-link>Services</a>
+      <a href="pricing/" data-drawer-link>Pricing</a>
       <a href="booking.html" data-drawer-link>Book</a>
       <a href="accessories.html" data-drawer-link>Accessories</a>
       <a href="#areas" data-drawer-link>Areas</a>
       <a href="#reviews" data-drawer-link>Reviews</a>
-      <a href="#contact" data-drawer-link>Contact</a>
+      <a href="contact/" data-drawer-link>Contact</a>
     </nav>
     <div class="drawer-actions">
       <a class="button button-primary" href="booking.html" data-drawer-link>Request Repair</a>
@@ -1207,7 +1212,7 @@
     <section class="hero" id="home">
       <div class="hero-copy">
         <div class="hero-media">
-          <img class="hero-photo" src="assets/hero-cracked-devices.png" alt="Cracked iPhone and iPad ready for repair" />
+          <img class="hero-photo" src="assets/hero-cracked-devices-optimized.jpg" alt="Cracked iPhone and iPad ready for repair" width="700" height="438" fetchpriority="high" decoding="async" />
           <div class="hero-badge">
             <img src="assets/main-logo.png" alt="Fix It Mobile Repair logo" />
           </div>
@@ -1217,7 +1222,7 @@
         <p>Fix It Mobile brings professional iPhone and Android repair to your home, office, or preferred public location, so cracked screens and dead batteries stop disrupting your day.</p>
         <div class="hero-actions">
           <a class="button button-primary" href="booking.html">Request a Repair</a>
-          <a class="button button-secondary" href="#services">See Pricing</a>
+          <a class="button button-secondary" href="pricing/">See Pricing</a>
         </div>
         <div class="hero-stats">
           <div class="stat">
@@ -1304,30 +1309,35 @@
           <p>For cracked glass, touch issues, black screens, and display damage.</p>
           <div class="price">Screen repair from $59.99</div>
           <p>Final price depends on your phone model and screen type.</p>
+          <p><a href="iphone-screen-replacement/">iPhone screen replacement details</a></p>
         </article>
         <article class="service-card">
           <h3>Battery Replacement</h3>
           <p>For fast battery drain, swelling batteries, and shutdown issues.</p>
           <div class="price">Battery service from $39.99</div>
           <p>Includes a battery health check when supported by the device.</p>
+          <p><a href="iphone-battery-replacement/">iPhone battery replacement details</a></p>
         </article>
         <article class="service-card">
           <h3>Charging Port Repair</h3>
           <p>For inconsistent charging, loose cable fit, or damaged ports.</p>
           <div class="price">Port repair from $39.99</div>
           <p>We inspect for debris, wear, and charging damage before quoting.</p>
+          <p><a href="charging-port-repair/">Charging port repair details</a></p>
         </article>
         <article class="service-card">
           <h3>iPad Repair</h3>
           <p>Screen, battery, charging, and other common iPad repairs for many popular models.</p>
           <div class="price">Quote based on model</div>
           <p>We review the iPad model first, then follow up with pricing, parts availability, and the best repair option.</p>
+          <p><a href="ipad-screen-repair/">iPad screen repair details</a></p>
         </article>
         <article class="service-card">
           <h3>Back Glass Repair</h3>
           <p>Back glass replacement for eligible iPhone and Android models.</p>
           <div class="price">Quote required</div>
           <p>Availability depends on the model and repair method required.</p>
+          <p><a href="back-glass-repair/">Back glass repair details</a></p>
         </article>
         <article class="service-card">
           <h3>Gorilla Screen Protector</h3>
@@ -1361,12 +1371,12 @@
       </div>
       <div class="areas-wrap">
         <div class="area-grid">
-          <div class="area-pill">Edina</div>
-          <div class="area-pill">Eagan</div>
-          <div class="area-pill">Bloomington</div>
-          <div class="area-pill">Apple Valley</div>
-          <div class="area-pill">Minneapolis</div>
-          <div class="area-pill">Burnsville</div>
+          <a class="area-pill" href="iphone-repair-edina/">Edina</a>
+          <a class="area-pill" href="iphone-repair-eagan/">Eagan</a>
+          <a class="area-pill" href="iphone-repair-bloomington/">Bloomington</a>
+          <a class="area-pill" href="iphone-repair-apple-valley/">Apple Valley</a>
+          <a class="area-pill" href="iphone-repair-minneapolis/">Minneapolis</a>
+          <a class="area-pill" href="iphone-repair-burnsville/">Burnsville</a>
           <div class="area-pill">Lakeville</div>
           <div class="area-pill">Richfield</div>
           <div class="area-pill">Woodbury</div>
