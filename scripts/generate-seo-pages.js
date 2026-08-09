@@ -466,6 +466,19 @@ const services = [
   }
 ];
 
+const modelRepairs = JSON.parse(fs.readFileSync(path.join(root, "data", "repair-model-database.json"), "utf8")).models.map((model) => ({
+  ...model,
+  name: model.primaryKeyword.replace(/\b\w/g, (char) => char.toUpperCase()),
+  title: `${model.primaryKeyword.replace(/\b\w/g, (char) => char.toUpperCase())} | FIX IT Mobile`,
+  description: `Mobile ${model.primaryKeyword} in the Twin Cities. FIX IT Mobile comes to your home, office, or workplace for convenient same-day repair.`,
+  h1: `${model.device} ${model.repair} That Comes To You`,
+  faq: [
+    [`Do you offer ${model.primaryKeyword}?`, `Yes. FIX IT Mobile can help with ${model.primaryKeyword} after confirming the exact model, symptoms, parts, and appointment timing.`],
+    ["Can this repair be done at my home or office?", "Yes. We are a mobile repair service, so we come to your home, office, or workplace when the repair can be completed on-site."],
+    ["How long does the repair take?", "Many screen and charging repairs are completed in about 20-30 minutes after arrival, though model-specific repairs can vary by damage and parts."]
+  ]
+}));
+
 function htmlEscape(value) {
   return String(value).replace(/[&<>"']/g, (char) => ({
     "&": "&amp;",
@@ -923,6 +936,86 @@ function servicePage(service) {
 `;
 }
 
+function modelPage(model) {
+  const relevantService = services.find((service) => {
+    if (model.repair === "Charging Port Repair") return service.slug === "charging-port-repair" || service.slug === "samsung-charging-port-repair";
+    return service.slug.includes("screen") || service.slug === "iphone-screen-replacement";
+  }) || services[0];
+  const cityLinks = cities.map((city) => `<article class="card"><h3>${model.primaryKeyword.replace(/\b\w/g, (char) => char.toUpperCase())} in ${city.name}</h3><p>Need ${model.primaryKeyword} near ${city.name}? FIX IT Mobile comes to homes, offices, and workplaces by appointment.</p><a href="../${city.slug}/">View ${city.name} mobile repair</a></article>`).join("\n");
+  const faq = model.faq.map(([q, a]) => `<article class="faq-item"><h3>${q}</h3><p>${a}</p></article>`).join("\n");
+  return `${head(model)}
+  ${schemaScripts(model)}
+</head>
+<body>
+  ${nav("..")}
+  <main class="shell">
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Model-specific mobile repair</div>
+        <h1>${model.h1}</h1>
+        <p><strong>We Fit Your Schedule. We Come To You.</strong></p>
+        <p>FIX IT Mobile helps with ${model.primaryKeyword} at your home, office, or workplace across the Twin Cities. We confirm the exact model, damage, and parts before the appointment.</p>
+        ${ctaBlock("..")}
+      </div>
+      <div class="hero-media">
+        <img class="hero-photo" src="../assets/hero-cracked-devices-optimized.jpg" alt="${model.primaryKeyword} with mobile repair from FIX IT Mobile" width="700" height="438" fetchpriority="high" decoding="async">
+      </div>
+    </section>
+
+    <section class="trust-grid" aria-label="FIX IT Mobile trust signals">
+      <div class="trust-item">&#9733; 153+ Google Reviews</div>
+      <div class="trust-item">4.9-Star Rating</div>
+      <div class="trust-item">Same-Day Service</div>
+      <div class="trust-item">Premium Parts</div>
+      <div class="trust-item">Warranty Included</div>
+      <div class="trust-item">We Come To You</div>
+    </section>
+
+    <section class="split">
+      <div class="content-panel">
+        <h2>The problem.</h2>
+        <p>Customers searching for ${model.primaryKeyword} usually need a direct answer: can the device be fixed, how quickly can it be done, and can the repair fit into a normal day? A cracked display, unreliable charging port, touch issue, or damaged glass can interrupt calls, maps, work apps, school use, photos, and two-factor authentication.</p>
+        <h2>Our repair process.</h2>
+        <p>We start by confirming your ${model.device}, the exact symptoms, and whether the device has frame damage, liquid exposure, or other issues that could affect the repair. That helps us quote accurately and bring the right parts.</p>
+        <p>For eligible repairs, we come to your home, office, or workplace and complete the work on-site. Most common repairs are completed in about 20-30 minutes after arrival, depending on damage and parts.</p>
+        <h2>Pricing starts from.</h2>
+        <p>Model-specific pricing is confirmed before the appointment because screen type, part quality, color, and repair method can change the final quote.</p>
+        <h2>Why choose FIX IT Mobile?</h2>
+        <p>We fit your schedule, come to you, use premium-quality parts, include warranty coverage on eligible work, and help you avoid waiting in a repair shop.</p>
+        ${ctaBlock("..")}
+      </div>
+      <aside class="review-panel" id="google-reviews">
+        <h2>Google Reviews</h2>
+        <p>153+ Google Reviews, a 4.9-star rating, fast response time, and professional mobile service across the Twin Cities.</p>
+        <div class="review-stats">
+          <span>&#9733; 153+ Google Reviews</span>
+          <span>4.9 Rating</span>
+          <span>No Waiting in Repair Shops</span>
+        </div>
+      </aside>
+    </section>
+
+    <section>
+      <div class="section-head"><h2>Related repair page.</h2></div>
+      <div class="content-panel mini-links"><a href="../${relevantService.slug}/">${relevantService.name}</a><a href="../pricing/">Pricing</a><a href="../contact/">Contact</a></div>
+    </section>
+
+    <section>
+      <div class="section-head"><h2>Available near you.</h2></div>
+      <div class="link-grid">${cityLinks}</div>
+    </section>
+
+    <section>
+      <div class="section-head"><h2>${model.primaryKeyword.replace(/\b\w/g, (char) => char.toUpperCase())} FAQs.</h2></div>
+      <div class="faq-grid">${faq}</div>
+    </section>
+  </main>
+  ${footer("..")}
+</body>
+</html>
+`;
+}
+
 function pricingPage() {
   const serviceCards = services.map((service) => `<article class="card"><h3>${service.name}</h3><p>${service.summary}</p><a href="../${service.slug}/">Service details</a></article>`).join("\n");
   return `${head({
@@ -999,7 +1092,8 @@ function writeSitemap() {
     "pricing/",
     "contact/",
     ...cities.map((city) => `${city.slug}/`),
-    ...services.map((service) => `${service.slug}/`)
+    ...services.map((service) => `${service.slug}/`),
+    ...modelRepairs.map((model) => `${model.slug}/`)
   ];
   const urls = routes.map((route) => `  <url><loc>${siteUrl}/${route}</loc></url>`).join("\n");
   fs.writeFileSync(path.join(root, "sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?>
@@ -1015,8 +1109,9 @@ Sitemap: ${siteUrl}/sitemap.xml
 
 cities.forEach((city) => writePage(city.slug, cityPage(city)));
 services.forEach((service) => writePage(service.slug, servicePage(service)));
+modelRepairs.forEach((model) => writePage(model.slug, modelPage(model)));
 writePage("pricing", pricingPage());
 writePage("contact", contactPage());
 writeSitemap();
 
-console.log(`Generated ${cities.length} city pages, ${services.length} service pages, pricing, contact, sitemap, and robots.`);
+console.log(`Generated ${cities.length} city pages, ${services.length} service pages, ${modelRepairs.length} model pages, pricing, contact, sitemap, and robots.`);

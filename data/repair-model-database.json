@@ -9,10 +9,10 @@
       "relatedCityIntent": ["Minneapolis", "Edina", "Bloomington", "Eagan", "Apple Valley", "Burnsville", "Lakeville", "Richfield", "St. Paul"]
     },
     {
-      "slug": "iphone-16-pro-screen-replacement",
-      "device": "iPhone 16 Pro",
+      "slug": "iphone-16-screen-replacement",
+      "device": "iPhone 16",
       "repair": "Screen Replacement",
-      "primaryKeyword": "iPhone 16 Pro screen replacement",
+      "primaryKeyword": "iPhone 16 screen replacement",
       "relatedCityIntent": ["Minneapolis", "Edina", "Bloomington", "Eagan", "Apple Valley", "Burnsville", "Lakeville", "Richfield", "St. Paul"]
     },
     {

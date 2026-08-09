@@ -488,7 +488,7 @@
     }
 
     .hero h1 {
-      max-width: 11ch;
+      max-width: 12ch;
       font-family: Georgia, "Times New Roman", serif;
       font-size: clamp(3.2rem, 7vw, 5.9rem);
       line-height: 0.95;
@@ -496,6 +496,10 @@
       margin-bottom: 22px;
       color: #fff8ee;
       text-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+    }
+
+    .hero h1 span {
+      display: block;
     }
 
     .hero p {
@@ -890,9 +894,42 @@
       margin-bottom: 8px;
     }
 
+    .choice-card strong::before {
+      content: "\2713";
+      color: var(--accent);
+      margin-right: 8px;
+    }
+
     .choice-card span {
       color: var(--ink-soft);
       font-size: 0.96rem;
+    }
+
+    .model-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .model-card {
+      display: block;
+      min-height: 142px;
+      padding: 22px;
+      border-radius: 22px;
+      background: rgba(255, 253, 249, 0.92);
+      border: 1px solid rgba(21, 35, 29, 0.08);
+      box-shadow: 0 18px 40px rgba(52, 42, 24, 0.08);
+      text-decoration: none;
+    }
+
+    .model-card strong {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .model-card span {
+      color: var(--ink-soft);
+      font-size: 0.94rem;
     }
 
     .trust-band {
@@ -1068,6 +1105,7 @@
       .contact-details,
       .area-grid,
       .choice-grid,
+      .model-grid,
       .trust-band,
       .service-grid,
       .review-grid,
@@ -1299,7 +1337,8 @@
           </div>
         </div>
         <div class="eyebrow">Same-day mobile repair available</div>
-        <h1>We Fit Your Schedule. We Come To You.</h1>
+        <h1><span>We Fit Your Schedule.</span><span>We Come To You.</span></h1>
+        <p>Home &bull; Office &bull; Workplace &bull; Same-Day Mobile Repair</p>
         <p>Professional iPhone, iPad &amp; Samsung repair at your home, office, or workplace. Most repairs are completed in about 20-30 minutes.</p>
         <div class="hero-actions">
           <a class="button button-primary" href="booking.html">Get a Quote</a>
@@ -1379,14 +1418,27 @@
         <p>Mobile repair is built for customers who need the phone fixed without losing the day to driving, waiting, and coming back later.</p>
       </div>
       <div class="choice-grid">
-        <div class="choice-card"><strong>We Fit Your Schedule.</strong><span>Appointments are planned around home, office, and workplace timing.</span></div>
-        <div class="choice-card"><strong>No Waiting.</strong><span>Skip the repair shop lobby and avoid leaving your device behind.</span></div>
-        <div class="choice-card"><strong>We Come To You.</strong><span>Home, office, workplace, or another practical appointment location.</span></div>
-        <div class="choice-card"><strong>Same-Day Service</strong><span>Many iPhone screen, battery, and charging repairs can be handled quickly.</span></div>
-        <div class="choice-card"><strong>Premium OLED Screens</strong><span>Available for select iPhone models when you want an upgraded display option.</span></div>
+        <div class="choice-card"><strong>We Fit Your Schedule</strong><span>Appointments are planned around home, office, and workplace timing.</span></div>
+        <div class="choice-card"><strong>We Come To You</strong><span>Home, office, workplace, or another practical appointment location.</span></div>
+        <div class="choice-card"><strong>Most Repairs in 20-30 Minutes</strong><span>Many iPhone screen, battery, and charging repairs can be completed quickly.</span></div>
         <div class="choice-card"><strong>153+ Google Reviews</strong><span>Local customers trust the convenience, speed, and communication.</span></div>
+        <div class="choice-card"><strong>Premium Parts</strong><span>Premium OLED screens are available for select iPhone models.</span></div>
         <div class="choice-card"><strong>Warranty Included</strong><span>Eligible repairs include warranty coverage and clear expectations.</span></div>
-        <div class="choice-card"><strong>Fast Response Time</strong><span>Send your device model and issue so we can quote the right repair.</span></div>
+        <div class="choice-card"><strong>No Waiting in Repair Shops</strong><span>Skip the lobby and avoid leaving your device behind.</span></div>
+      </div>
+    </section>
+
+    <section id="model-repairs">
+      <div class="section-head">
+        <h2>Popular model-specific repairs.</h2>
+        <p>These pages match the way people search when they already know their device model and repair need.</p>
+      </div>
+      <div class="model-grid">
+        <a class="model-card" href="iphone-15-screen-replacement/"><strong>iPhone 15 Screen Replacement</strong><span>Mobile screen repair for cracked glass, display lines, and touch issues.</span></a>
+        <a class="model-card" href="iphone-16-screen-replacement/"><strong>iPhone 16 Screen Replacement</strong><span>Same-day mobile display help for eligible iPhone 16 repairs.</span></a>
+        <a class="model-card" href="iphone-14-pro-max-screen-replacement/"><strong>iPhone 14 Pro Max Screen Replacement</strong><span>Premium screen options for a large iPhone display.</span></a>
+        <a class="model-card" href="s22-ultra-charging-port-repair/"><strong>S22 Ultra Charging Port Repair</strong><span>Help for loose cables, slow charging, and port diagnostics.</span></a>
+        <a class="model-card" href="ipad-10-screen-replacement/"><strong>iPad 10 Screen Repair</strong><span>Repair planning for cracked iPad 10th generation glass.</span></a>
       </div>
     </section>
 
