@@ -170,6 +170,87 @@ const cities = [
       ["Can you help with a phone that got wet?", "Yes. We offer water damage diagnostics and explain the realistic repair options after inspection."],
       ["How do I book Burnsville mobile repair?", "Call now or use the booking page with your model, issue, location, and preferred timing."]
     ]
+  },
+  {
+    name: "Lakeville",
+    slug: "iphone-repair-lakeville",
+    title: "Mobile iPhone Repair in Lakeville | FIX IT Mobile",
+    description: "Mobile iPhone repair in Lakeville for homes, offices, and workplaces. FIX IT Mobile comes to you for iPhone, iPad, and Samsung repairs.",
+    h1: "Mobile iPhone Repair in Lakeville",
+    subhead: "We Fit Your Schedule. We Come To You.",
+    intro: [
+      "Lakeville customers often choose mobile phone repair because the city is spread across neighborhoods, schools, parks, and busy commuting routes. FIX IT Mobile comes to your home, office, or workplace so a broken phone does not turn into a long round trip.",
+      "If you are near downtown Lakeville, Kenwood Trail, Lake Marion, or a neighborhood along Cedar Avenue, the repair can be planned around your day instead of the other way around. That is helpful when an iPhone still works but the cracked glass, weak battery, or charging problem makes every task harder.",
+      "We handle iPhone screen replacement, battery replacement, charging port repair, back glass repair, camera repair, and water damage diagnostics for many common models. We also help with iPad repairs and Samsung repairs after confirming parts and the best repair path.",
+      "Most common iPhone repairs take about 20-30 minutes after arrival. Before work begins, we confirm the model, explain the quote, and make sure the symptoms match the repair being recommended.",
+      "The goal is simple: professional repair without losing your morning, lunch break, or evening to a repair shop visit. We fit your schedule, travel to your location, and keep the process clear."
+    ],
+    local: [
+      "Lakeville homeowners often need help when a family phone or school iPad breaks at the worst possible time. Mobile repair makes it easier to keep dinner, practice, homework, and work calls moving.",
+      "For Lakeville offices and job sites, a cracked screen or dead battery can interrupt calls, maps, customer photos, and two-factor authentication. An on-site appointment keeps the repair from becoming a bigger workday disruption.",
+      "Customers near Lake Marion, Aronson Park, and County Road 50 often ask about same-day service. Availability depends on the route and parts, but reaching out early gives us more room to fit the appointment into the day."
+    ],
+    faq: [
+      ["Do you come to homes in Lakeville?", "Yes. We serve Lakeville homes, offices, and workplaces by appointment."],
+      ["Can you repair an iPhone screen in Lakeville the same day?", "Same-day screen replacement is often available when the part is in stock and route timing works."],
+      ["Do you repair iPads for Lakeville families?", "Yes. We repair many iPad models, including screen and charging issues, after confirming the model."],
+      ["Can you help with a Samsung phone that will not charge?", "Yes. We inspect Samsung charging issues and provide charging port repair when appropriate."],
+      ["What should I send before booking?", "Send the device model, the problem, your Lakeville location, and photos if the damage is visible."]
+    ]
+  },
+  {
+    name: "Richfield",
+    slug: "iphone-repair-richfield",
+    title: "Mobile iPhone Repair in Richfield | FIX IT Mobile",
+    description: "FIX IT Mobile provides mobile iPhone repair in Richfield for homes, apartments, offices, and workplaces near Minneapolis and Edina.",
+    h1: "Mobile iPhone Repair in Richfield",
+    subhead: "We Fit Your Schedule. We Come To You.",
+    intro: [
+      "Richfield is close to everything, but a repair shop errand can still eat up more time than expected. FIX IT Mobile brings iPhone, iPad, and Samsung repair to your home, apartment, office, or workplace so you can stay focused on your day.",
+      "Whether you are near Penn Avenue, Lyndale Avenue, Best Buy headquarters, Wood Lake Nature Center, or a neighborhood close to 66th Street, mobile repair gives you a practical alternative to waiting in a store.",
+      "We provide iPhone screen replacement, battery replacement, charging port repair, back glass repair, camera repair, and water damage diagnostics for many models. iPad repairs and Samsung repairs are also available when parts and the repair method are confirmed.",
+      "Most common iPhone repairs are completed in about 20-30 minutes after arrival. We start by reviewing the issue, checking the model, and explaining pricing so you understand the repair before it begins.",
+      "For Richfield customers, the value is convenience with professional follow-through. We fit your schedule, come to your location, and help you avoid the extra drive, parking, and wait."
+    ],
+    local: [
+      "Richfield apartment residents often appreciate mobile repair because parking, elevators, and busy schedules can make a simple errand feel less simple. We coordinate a practical appointment window and come to you.",
+      "For offices near I-494, Highway 77, and nearby business areas, phone repair can be handled without sending someone away from work. That matters when phones are used for scheduling, access codes, calls, or customer photos.",
+      "Homeowners near Veterans Park, Wood Lake, and the neighborhoods between Minneapolis and Edina often contact us for same-day phone repair. We confirm the part first so the visit is efficient."
+    ],
+    faq: [
+      ["Do you serve Richfield apartments and condos?", "Yes. We can meet at apartments, condos, homes, offices, and workplaces by appointment."],
+      ["Can you repair my iPhone near Best Buy headquarters?", "Yes. We serve Richfield business areas when access and scheduling are clear."],
+      ["Do you offer battery replacement in Richfield?", "Yes. Battery replacement is available for many iPhone models after model confirmation."],
+      ["Can you repair iPads and Samsung phones?", "Yes. We service many iPad and Samsung models depending on parts and the exact issue."],
+      ["How quickly can I get an appointment?", "Same-day appointments are often possible, especially when you call or book early."]
+    ]
+  },
+  {
+    name: "St. Paul",
+    slug: "iphone-repair-st-paul",
+    title: "Mobile iPhone Repair in St. Paul | FIX IT Mobile",
+    description: "Mobile iPhone repair in St. Paul. FIX IT Mobile comes to homes, offices, workplaces, and neighborhoods across Saint Paul.",
+    h1: "Mobile iPhone Repair in St. Paul",
+    subhead: "We Fit Your Schedule. We Come To You.",
+    intro: [
+      "St. Paul customers need phone repair that works around neighborhoods, parking, work schedules, and family routines. FIX IT Mobile brings professional iPhone, iPad, and Samsung repair to your home, office, or workplace so you can skip the shop visit.",
+      "From Downtown St. Paul offices to Highland Park homes, Macalester-Groveland apartments, and neighborhoods near Como Park, mobile repair makes the process easier when a phone breaks during a busy week.",
+      "We handle iPhone screen replacement, battery replacement, charging port repair, back glass repair, camera repair, and water damage diagnostics for many popular models. We also provide iPad repairs and Samsung repairs after confirming the device and parts.",
+      "Many common iPhone repairs take about 20-30 minutes after arrival. We verify the model, inspect the symptoms, explain pricing, and complete eligible work with premium-quality parts and warranty coverage.",
+      "The promise stays the same across St. Paul: we fit your schedule, we come to you, and we keep the repair experience straightforward from the first call to the finished device."
+    ],
+    local: [
+      "Downtown St. Paul workers often need a fast screen replacement or battery appointment between meetings. Mobile service keeps the repair from interrupting the rest of the workday.",
+      "Families around Highland Park, Summit Hill, and Como often rely on several devices for school, work, navigation, and communication. We can review iPhones, iPads, and Samsung phones during the same appointment when it makes sense.",
+      "Customers near the Xcel Energy Center, University Avenue, and Cathedral Hill often ask whether we can meet at a workplace or home. Yes, as long as the appointment location is practical and safe for the repair."
+    ],
+    faq: [
+      ["Do you come to Downtown St. Paul offices?", "Yes. We serve Downtown St. Paul offices and workplaces by appointment when building access is clear."],
+      ["Can you repair iPhones in St. Paul neighborhoods?", "Yes. We serve homes, apartments, offices, and workplaces across St. Paul."],
+      ["Do you offer same-day phone repair in St. Paul?", "Same-day service is often available depending on parts, route timing, and appointment demand."],
+      ["Can you repair Samsung phones and iPads?", "Yes. We repair many Samsung and iPad models after confirming the exact model and issue."],
+      ["Do you provide water damage diagnostics?", "Yes. We inspect liquid exposure and explain realistic options before recommending repair."]
+    ]
   }
 ];
 
@@ -181,6 +262,7 @@ const services = [
     description: "Mobile iPhone screen replacement in the Twin Cities. FIX IT Mobile comes to you for cracked glass, display problems, and touch issues.",
     h1: "iPhone Screen Replacement That Comes To You",
     summary: "Cracked glass, black spots, touch problems, display lines, and sharp edges can make an iPhone frustrating or unsafe to use. FIX IT Mobile brings iPhone screen replacement to your home, office, or workplace so you can skip the repair shop.",
+    price: "iPhone screen replacement starts from $59.99 depending on model and screen type.",
     details: [
       "We verify your iPhone model before quoting because screen type, display quality, and part availability matter. Premium OLED screens are available for select models when customers want a display option closer to the original look and feel.",
       "Most iPhone screen replacement appointments are completed in about 20-30 minutes after arrival. Before we begin, we inspect the device for frame damage, display symptoms, Face ID concerns, camera issues, and signs of liquid exposure.",
@@ -199,6 +281,7 @@ const services = [
     description: "Mobile iPhone battery replacement for fast drain, sudden shutdowns, swelling batteries, and poor battery health in the Twin Cities.",
     h1: "iPhone Battery Replacement Without The Shop Visit",
     summary: "A weak iPhone battery can turn a reliable device into a constant source of stress. If your phone drains quickly, shuts down early, gets unusually warm, or shows poor battery health, FIX IT Mobile can come to you for battery replacement.",
+    price: "iPhone battery replacement starts from $39.99 on eligible models.",
     details: [
       "We confirm your iPhone model and symptoms before the appointment so we can bring the right part and explain the expected result. Battery replacement is often one of the most practical ways to extend the life of a phone that otherwise works well.",
       "During the visit, we inspect for swelling, charging issues, and signs that another problem may be contributing to battery drain. If the charging port, software behavior, or liquid damage appears involved, we explain that before replacing parts.",
@@ -211,12 +294,51 @@ const services = [
     ]
   },
   {
+    name: "Camera Repair",
+    slug: "camera-repair",
+    title: "Camera Repair | FIX IT Mobile",
+    description: "Mobile camera repair and diagnostics for iPhone, iPad, and Samsung devices in the Twin Cities. We come to your home, office, or workplace.",
+    h1: "Phone Camera Repair That Comes To You",
+    summary: "Blurry photos, a black camera screen, shaking focus, cracked lens glass, or FaceTime issues can make a phone hard to use for work and everyday life. FIX IT Mobile inspects camera problems and repairs eligible devices at your location.",
+    price: "Camera repair pricing starts from $49.99 when parts are available.",
+    details: [
+      "We begin by checking whether the issue appears to be camera hardware, lens damage, liquid exposure, software behavior, or damage near the frame. Camera symptoms can overlap, so diagnosis matters before parts are replaced.",
+      "When a camera repair is the right fix, we confirm the exact model and explain the part, price, and expected turnaround. Some devices require a lens-only repair while others need a camera module or a more detailed diagnostic.",
+      "Mobile camera repair is useful for customers who rely on photos for work, receipts, listings, family updates, school, or travel. We come to your home, office, or workplace and keep the process direct."
+    ],
+    faq: [
+      ["Can you fix a black camera screen?", "Often, yes. We inspect the device first to determine whether the camera module, software, or liquid exposure is involved."],
+      ["Do you replace cracked camera lens glass?", "Lens glass repair is available for eligible models after we confirm the device and damage."],
+      ["Can camera repair be same day?", "Sometimes. Same-day camera repair depends on the model, part availability, and route timing."]
+    ]
+  },
+  {
+    name: "Water Damage Repair",
+    slug: "water-damage-repair",
+    title: "Water Damage Repair | FIX IT Mobile",
+    description: "Water damage diagnostics for iPhone, iPad, and Samsung devices in the Twin Cities. FIX IT Mobile checks liquid-exposed devices and explains options.",
+    h1: "Water Damage Diagnostics For Phones And Tablets",
+    summary: "Liquid damage can cause charging failure, screen problems, camera issues, random restarts, speaker trouble, or a phone that will not power on. FIX IT Mobile provides water damage diagnostics and explains realistic repair options.",
+    price: "Water damage diagnostics start from $39.99.",
+    details: [
+      "Water damage repair starts with inspection, not assumptions. We check visible symptoms, charging behavior, screen response, power behavior, and signs of corrosion before recommending a repair.",
+      "Liquid exposure can be unpredictable. Sometimes cleaning and part replacement can help; other times the board damage is too severe for a practical repair. We explain what we find before you spend more.",
+      "Mobile diagnostics are helpful when you need a clear answer quickly. We come to your location, inspect the device, and help you decide whether repair, data recovery planning, or replacement is the smarter next step."
+    ],
+    faq: [
+      ["Should I charge a wet phone?", "No. Avoid charging the device until it has been inspected because power can worsen liquid damage."],
+      ["Is water damage repair guaranteed?", "Liquid damage is unpredictable, so diagnosis comes first and outcomes vary by severity."],
+      ["Can you diagnose iPads and Samsung phones?", "Yes. We diagnose liquid exposure on many iPhone, iPad, and Samsung models."]
+    ]
+  },
+  {
     name: "iPad Screen Repair",
     slug: "ipad-screen-repair",
     title: "iPad Screen Repair | FIX IT Mobile",
     description: "iPad screen repair in the Twin Cities with mobile service. We help with cracked glass, display damage, and touch issues for many iPad models.",
     h1: "iPad Screen Repair For Homes, Families, And Work",
     summary: "iPads are used for school, work, checkout systems, travel, streaming, and family life. When the glass cracks or the display stops responding, FIX IT Mobile can help with iPad screen repair for many popular models.",
+    price: "iPad screen repair is quoted by model and generation.",
     details: [
       "iPad repairs depend heavily on the exact model, generation, and screen assembly. We confirm those details first so the quote is accurate and the repair plan is realistic.",
       "Some iPad screen repairs require more time than a typical iPhone repair because of adhesive, glass separation, display assemblies, or calibration needs. We set expectations before the appointment so there are no surprises.",
@@ -229,12 +351,51 @@ const services = [
     ]
   },
   {
+    name: "iPad Battery Replacement",
+    slug: "ipad-battery-replacement",
+    title: "iPad Battery Replacement | FIX IT Mobile",
+    description: "Mobile iPad battery replacement in the Twin Cities for poor battery life, swelling, sudden shutdowns, and charging problems.",
+    h1: "iPad Battery Replacement For Home And Work",
+    summary: "An iPad with poor battery life can disrupt school, work, travel, checkout systems, and family routines. FIX IT Mobile helps with iPad battery replacement for many models after confirming the exact generation.",
+    price: "iPad battery replacement is quoted by model.",
+    details: [
+      "iPad battery replacement depends on the model, adhesive, screen condition, and parts availability. We confirm the generation first so we can provide the right quote and timing.",
+      "Before recommending a battery, we review charging behavior, shutdown symptoms, swelling concerns, and whether a charging port or cable issue may be involved. That helps avoid replacing the wrong part.",
+      "Mobile iPad service is especially helpful for families and businesses that use tablets every day. We coordinate the appointment, explain the process, and keep the repair path clear."
+    ],
+    faq: [
+      ["Can you replace an iPad battery at my home?", "Many iPad battery services can be coordinated through mobile repair after model confirmation."],
+      ["How do I know which iPad model I have?", "You can send the model number from Settings or the back of the iPad, and we will confirm it."],
+      ["Do swollen iPad batteries need urgent attention?", "Yes. Stop using the device and contact us so we can discuss safe next steps."]
+    ]
+  },
+  {
+    name: "Samsung Repair",
+    slug: "samsung-repair",
+    title: "Samsung Repair | FIX IT Mobile",
+    description: "Mobile Samsung repair in the Twin Cities for Galaxy screens, charging ports, batteries, cameras, and diagnostics. We come to you.",
+    h1: "Samsung Repair With Mobile Convenience",
+    summary: "Samsung phones handle work, photos, navigation, payments, and communication every day. When a Galaxy phone breaks, FIX IT Mobile can help with screen repair, charging issues, camera problems, and diagnostics at your location.",
+    price: "Samsung repair pricing starts from $49.99 depending on the model and issue.",
+    details: [
+      "Samsung repair is model-specific, so we confirm the exact Galaxy model before quoting. Screen type, color, part availability, and repair method can all affect price and timing.",
+      "We inspect the problem carefully before replacing parts. A cracked display, unreliable charging port, weak battery, camera issue, or liquid exposure can sometimes create overlapping symptoms.",
+      "Our mobile repair service is built for customers who do not want to lose time driving to a shop. We come to your home, office, or workplace and explain the best option clearly."
+    ],
+    faq: [
+      ["Which Samsung models do you repair?", "We repair many Galaxy models. Send the exact model number so we can confirm parts and pricing."],
+      ["Do you replace Samsung screens?", "Yes. Samsung screen replacement is available for many models depending on part availability."],
+      ["Can you repair Samsung charging ports?", "Yes. We diagnose charging issues and repair charging ports when that is the right fix."]
+    ]
+  },
+  {
     name: "Samsung Screen Repair",
     slug: "samsung-screen-repair",
     title: "Samsung Screen Repair | FIX IT Mobile",
     description: "Samsung screen repair and mobile phone repair in the Twin Cities. We service many Galaxy models after confirming parts and model details.",
     h1: "Samsung Screen Repair With Mobile Convenience",
     summary: "Samsung phones are powerful, but a cracked or damaged display can make them difficult to use quickly. FIX IT Mobile provides Samsung screen repair for many Galaxy models with service designed around your schedule.",
+    price: "Samsung screen replacement is quoted by model, color, and screen type.",
     details: [
       "Samsung screen repair pricing and availability can vary by exact model, screen type, color, and parts supply. We confirm those details before setting expectations so you know what is available.",
       "We inspect for display lines, dead touch areas, cracked glass, frame damage, camera concerns, and charging issues. If a diagnostic is a better first step than a screen replacement, we will say so.",
@@ -247,12 +408,32 @@ const services = [
     ]
   },
   {
+    name: "Samsung Charging Port Repair",
+    slug: "samsung-charging-port-repair",
+    title: "Samsung Charging Port Repair | FIX IT Mobile",
+    description: "Mobile Samsung charging port repair in the Twin Cities for loose cables, slow charging, debris, and unreliable Galaxy charging.",
+    h1: "Samsung Charging Port Repair That Comes To You",
+    summary: "If your Samsung phone only charges at an angle, charges slowly, or will not recognize a cable, the issue may be debris, wear, liquid exposure, or a damaged charging assembly. FIX IT Mobile diagnoses Samsung charging problems at your location.",
+    price: "Samsung charging port repair starts from $49.99 on eligible models.",
+    details: [
+      "We inspect the charging port, cable fit, battery behavior, and signs of liquid exposure before recommending a replacement. Some charging issues can be resolved with cleaning or a different accessory.",
+      "When a port repair is needed, we confirm the exact Galaxy model and explain parts, pricing, and appointment timing. Samsung repair methods vary by model, so quoting accurately matters.",
+      "Mobile Samsung charging port repair saves the extra trip when the device is still usable but unreliable. We come to your home, office, or workplace and help restore dependable charging."
+    ],
+    faq: [
+      ["Can you clean a Samsung charging port?", "Yes, if debris is the issue. We inspect first and recommend cleaning or repair as appropriate."],
+      ["Do Samsung charging ports require parts?", "Sometimes. It depends on whether the issue is debris, wear, liquid exposure, battery behavior, or a damaged port."],
+      ["Can this be repaired same day?", "Same-day repair may be available depending on the model, parts, and schedule."]
+    ]
+  },
+  {
     name: "Charging Port Repair",
     slug: "charging-port-repair",
     title: "Charging Port Repair | FIX IT Mobile",
     description: "Mobile charging port repair for iPhone, iPad, and Samsung devices in the Twin Cities. We come to you for loose or unreliable charging.",
     h1: "Charging Port Repair For Phones And Tablets",
     summary: "If your cable only works at an angle, the phone charges slowly, or the port feels loose, the problem may be debris, wear, liquid exposure, or a damaged charging assembly. FIX IT Mobile can inspect and repair charging issues at your location.",
+    price: "Charging port repair starts from $39.99 on eligible devices.",
     details: [
       "We start with diagnosis because not every charging problem needs a port replacement. Sometimes the issue is lint, a worn cable, battery health, or liquid damage. A careful inspection helps avoid unnecessary parts.",
       "When charging port repair is the right fix, we explain the process, the expected turnaround, and the warranty coverage for eligible work. iPhone, iPad, and Samsung charging repairs vary by model.",
@@ -271,6 +452,7 @@ const services = [
     description: "Back glass repair for eligible iPhone and Android models in the Twin Cities. FIX IT Mobile checks your model and explains options clearly.",
     h1: "Back Glass Repair For Eligible Phones",
     summary: "Cracked back glass can leave sharp edges, affect resale value, and make a phone uncomfortable to hold. FIX IT Mobile offers back glass repair for eligible iPhone and Android models after confirming the model and repair method.",
+    price: "Back glass repair is quoted by model and repair method.",
     details: [
       "Back glass repair is more model-specific than a typical screen replacement. Some devices require special handling, longer repair time, or a different repair approach. We quote it carefully so expectations are clear.",
       "During the intake, we ask about the exact device, wireless charging behavior, camera lens area, frame condition, and whether any other symptoms appeared after the drop.",
@@ -504,22 +686,68 @@ function localBusinessSchema(page, extra = {}) {
   };
 }
 
-function cityPage(city) {
-  const serviceBlurbs = {
-    "iphone-screen-replacement": "Cracked glass, display lines, black screens, and touch issues for many iPhone models.",
-    "iphone-battery-replacement": "Help for fast battery drain, poor battery health, swelling, and sudden shutdowns.",
-    "ipad-screen-repair": "Model-specific help for cracked iPad glass, display damage, and charging issues.",
-    "samsung-screen-repair": "Samsung phone repair for cracked screens, charging trouble, and diagnostics.",
-    "charging-port-repair": "Inspection and repair for loose cables, unreliable charging, debris, or worn ports.",
-    "back-glass-repair": "Back glass options for eligible iPhone and Android models after model confirmation."
+function breadcrumbSchema(page) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: `${siteUrl}/`
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: page.name || page.h1 || page.title,
+        item: `${siteUrl}/${page.slug}/`
+      }
+    ]
   };
-  const serviceCards = services.map((service) => `<article class="card"><h3>${service.name}</h3><p>${serviceBlurbs[service.slug]}</p><a href="../${service.slug}/">Learn about ${service.name.toLowerCase()}</a></article>`).join("\n");
+}
+
+function faqSchema(page) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: page.faq.map(([question, answer]) => ({
+      "@type": "Question",
+      name: question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: answer
+      }
+    }))
+  };
+}
+
+function schemaScripts(page, extra = {}) {
+  return [
+    localBusinessSchema(page, extra),
+    breadcrumbSchema(page),
+    faqSchema(page)
+  ].map((schema) => `<script type="application/ld+json">${JSON.stringify(schema)}</script>`).join("\n  ");
+}
+
+function ctaBlock(prefix = "..") {
+  return `<div class="hero-actions">
+          <a class="button button-primary" href="${prefix}/booking.html">Get Quote</a>
+          <a class="button button-secondary" href="tel:${phoneHref}">Call Now</a>
+          <a class="button button-secondary" href="sms:${phoneHref}">Text Tony</a>
+          <a class="button button-secondary" href="${prefix}/booking.html">Request Repair</a>
+          <a class="button button-secondary" href="${prefix}/booking.html">Book Today</a>
+        </div>`;
+}
+
+function cityPage(city) {
+  const serviceCards = services.map((service) => `<a href="../${service.slug}/">${service.name}</a>`).join("\n");
   const otherCities = cities.filter((item) => item.slug !== city.slug).map((item) => `<article class="card"><h3>${item.name}</h3><p>Need mobile phone repair nearby? See how FIX IT Mobile serves ${item.name} homes, offices, and workplaces.</p><a href="../${item.slug}/">View ${item.name} repair page</a></article>`).join("\n");
   const intro = city.intro.map((paragraph) => `<p>${paragraph}</p>`).join("\n");
   const local = city.local.map((paragraph) => `<p>${paragraph}</p>`).join("\n");
   const faq = city.faq.map(([q, a]) => `<article class="faq-item"><h3>${q}</h3><p>${a}</p></article>`).join("\n");
   return `${head(city)}
-  <script type="application/ld+json">${JSON.stringify(localBusinessSchema(city, { areaServed: city.name }))}</script>
+  ${schemaScripts(city, { areaServed: city.name })}
 </head>
 <body>
   ${nav("..")}
@@ -530,10 +758,7 @@ function cityPage(city) {
         <h1>${city.h1}</h1>
         <p><strong>${city.subhead}</strong></p>
         <p>Skip the repair shop. FIX IT Mobile comes directly to your home, office, or workplace in ${city.name}. Most repairs are completed in 20-30 minutes using premium-quality parts.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="tel:${phoneHref}">Call Now</a>
-          <a class="button button-secondary" href="../booking.html">Book Repair</a>
-        </div>
+        ${ctaBlock("..")}
       </div>
       <div class="hero-media">
         <img class="hero-photo" src="../assets/hero-cracked-devices-optimized.jpg" alt="Cracked phone and tablet devices repaired by FIX IT Mobile" width="700" height="438" fetchpriority="high" decoding="async">
@@ -561,7 +786,7 @@ function cityPage(city) {
         <h2>Repairs available in ${city.name}.</h2>
         <p>These are the most requested mobile repair services. Every repair begins with model confirmation, symptom review, and clear pricing before work begins.</p>
       </div>
-      <div class="service-grid">${serviceCards}</div>
+      <div class="content-panel mini-links">${serviceCards}</div>
     </section>
 
     <section class="split">
@@ -591,6 +816,7 @@ function cityPage(city) {
         <p>We fit your schedule instead of asking you to fit ours. Mobile phone repair is useful because the technician travels to your location, brings the right tools, and handles the repair while you stay close to work, home, or the rest of your day.</p>
         <p>There is no waiting in repair shops, no second trip to pick up your device, and no need to leave your phone behind longer than necessary. Fast turnaround matters, but so does professional service, honest communication, and premium-quality parts selected for your specific device.</p>
         <p>Customers searching for phone repair near me, mobile iPhone repair, mobile phone repair, same-day phone repair, iPad repair, Samsung phone repair, or mobile repair service choose us because the process is simple: call or book, confirm the details, and let us come to you.</p>
+        ${ctaBlock("..")}
       </div>
     </section>
 
@@ -620,7 +846,7 @@ function servicePage(service) {
   const faq = service.faq.map(([q, a]) => `<article class="faq-item"><h3>${q}</h3><p>${a}</p></article>`).join("\n");
   const relatedServices = services.filter((item) => item.slug !== service.slug).map((item) => `<a href="../${item.slug}/">${item.name}</a>`).join("");
   return `${head(service)}
-  <script type="application/ld+json">${JSON.stringify(localBusinessSchema(service))}</script>
+  ${schemaScripts(service)}
 </head>
 <body>
   ${nav("..")}
@@ -631,10 +857,7 @@ function servicePage(service) {
         <h1>${service.h1}</h1>
         <p><strong>We Fit Your Schedule. We Come To You.</strong></p>
         <p>${service.summary}</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="tel:${phoneHref}">Call Now</a>
-          <a class="button button-secondary" href="../booking.html">Book Repair</a>
-        </div>
+        ${ctaBlock("..")}
       </div>
       <div class="hero-media">
         <img class="hero-photo" src="../assets/hero-cracked-devices-optimized.jpg" alt="Phone and tablet repair service from FIX IT Mobile" width="700" height="438" fetchpriority="high" decoding="async">
@@ -652,9 +875,16 @@ function servicePage(service) {
 
     <section class="split">
       <div class="content-panel">
-        <h2>How this repair works.</h2>
+        <h2>The problem.</h2>
+        <p>${service.summary}</p>
+        <h2>Our repair process.</h2>
         ${service.details.map((paragraph) => `<p>${paragraph}</p>`).join("\n")}
+        <h2>Pricing starts from.</h2>
+        <p>${service.price}</p>
+        <h2>Why choose FIX IT Mobile?</h2>
         <p>Because FIX IT Mobile is a mobile repair service, you do not need to visit a store. We come to your home, office, or workplace, explain the repair, and complete eligible work with premium-quality parts and warranty coverage.</p>
+        <p>We fit your schedule, reduce waiting, respond quickly, and focus on professional repair that saves time without cutting corners.</p>
+        ${ctaBlock("..")}
       </div>
       <aside class="review-panel" id="google-reviews">
         <h2>Google Reviews</h2>
@@ -663,6 +893,8 @@ function servicePage(service) {
           <span>&#9733; 153+ Google Reviews</span>
           <span>4.9-Star Rating</span>
           <span>Same-Day Service</span>
+          <span>Premium Parts</span>
+          <span>Warranty Included</span>
         </div>
         <div class="hero-actions">
           <a class="button button-primary" href="${reviewUrl}" target="_blank" rel="noopener noreferrer">Google Reviews</a>

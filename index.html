@@ -3,10 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fix It Mobile Phone Repair | We Come To You</title>
+  <title>FIX IT Mobile iPhone &amp; iPad Repair | We Come To You</title>
+  <meta name="description" content="FIX IT Mobile provides mobile iPhone, iPad, and Samsung repair at your home, office, or workplace across the Twin Cities. Same-day appointments available." />
+  <link rel="canonical" href="https://fixitmobile.us/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="FIX IT Mobile iPhone &amp; iPad Repair | We Come To You" />
+  <meta property="og:description" content="Professional iPhone, iPad and Samsung repair at your home, office, or workplace. Most repairs are completed in about 20-30 minutes." />
+  <meta property="og:url" content="https://fixitmobile.us/" />
+  <meta property="og:image" content="https://fixitmobile.us/assets/hero-cracked-devices-optimized.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="FIX IT Mobile iPhone &amp; iPad Repair | We Come To You" />
+  <meta name="twitter:description" content="Mobile iPhone, iPad and Samsung repair across the Twin Cities. We fit your schedule and come to you." />
+  <meta name="twitter:image" content="https://fixitmobile.us/assets/hero-cracked-devices-optimized.jpg" />
   <link rel="icon" type="image/png" href="assets/favicon-v2.png" />
   <link rel="shortcut icon" href="assets/favicon-v2.png" />
   <link rel="apple-touch-icon" href="assets/favicon-v2.png" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","@id":"https://fixitmobile.us/#localbusiness","name":"FIX IT Mobile iPhone & iPad Repair","url":"https://fixitmobile.us/","image":"https://fixitmobile.us/assets/main-logo.png","telephone":"(612) 424-2111","email":"info@fixitmobile.us","priceRange":"$$","areaServed":["Minneapolis","Edina","Bloomington","Eagan","Apple Valley","Burnsville","Lakeville","Richfield","St. Paul"],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"153"},"makesOffer":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"iPhone Screen Replacement"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"iPhone Battery Replacement"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Charging Port Repair"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Back Glass Repair"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Camera Repair"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Water Damage Repair"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Samsung Repair"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"iPad Screen Repair"}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"FIX IT Mobile","url":"https://fixitmobile.us/"}</script>
   <style>
     :root {
       --bg: #f3efe7;
@@ -819,21 +832,86 @@
     }
 
     .area-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
     }
 
     .area-pill {
-      display: inline-flex;
-      align-items: center;
-      padding: 12px 18px;
-      border-radius: 999px;
+      display: block;
+      min-height: 150px;
+      padding: 22px;
+      border-radius: 22px;
       background: white;
       border: 1px solid rgba(21, 35, 29, 0.08);
       box-shadow: 0 12px 24px rgba(52, 42, 24, 0.06);
       font-weight: 800;
       text-decoration: none;
+    }
+
+    .area-pill strong {
+      display: block;
+      font-size: 1.22rem;
+      margin-bottom: 8px;
+    }
+
+    .area-pill span {
+      display: block;
+      color: var(--ink-soft);
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    .area-pill em {
+      display: inline-block;
+      margin-top: 14px;
+      color: var(--accent);
+      font-style: normal;
+      font-size: 0.92rem;
+    }
+
+    .choice-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .choice-card {
+      padding: 24px;
+      border-radius: 24px;
+      background: rgba(255, 253, 249, 0.92);
+      border: 1px solid rgba(21, 35, 29, 0.08);
+      box-shadow: 0 18px 40px rgba(52, 42, 24, 0.08);
+    }
+
+    .choice-card strong {
+      display: block;
+      font-size: 1.08rem;
+      margin-bottom: 8px;
+    }
+
+    .choice-card span {
+      color: var(--ink-soft);
+      font-size: 0.96rem;
+    }
+
+    .trust-band {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      padding: 30px;
+      border-radius: 32px;
+      background: linear-gradient(135deg, rgba(21, 35, 29, 0.95), rgba(31, 106, 82, 0.9));
+      color: #fffaf2;
+      box-shadow: var(--shadow);
+    }
+
+    .trust-band div {
+      padding: 16px;
+      border-radius: 18px;
+      background: rgba(255, 250, 242, 0.1);
+      border: 1px solid rgba(255, 250, 242, 0.12);
+      font-weight: 800;
     }
 
     .review-grid {
@@ -988,6 +1066,9 @@
       .section-head,
       .booking,
       .contact-details,
+      .area-grid,
+      .choice-grid,
+      .trust-band,
       .service-grid,
       .review-grid,
       .hero,
@@ -1218,11 +1299,11 @@
           </div>
         </div>
         <div class="eyebrow">Same-day mobile repair available</div>
-        <h1>Phone repair that meets you where you are.</h1>
-        <p>Fix It Mobile brings professional iPhone and Android repair to your home, office, or preferred public location, so cracked screens and dead batteries stop disrupting your day.</p>
+        <h1>We Fit Your Schedule. We Come To You.</h1>
+        <p>Professional iPhone, iPad &amp; Samsung repair at your home, office, or workplace. Most repairs are completed in about 20-30 minutes.</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="booking.html">Request a Repair</a>
-          <a class="button button-secondary" href="pricing/">See Pricing</a>
+          <a class="button button-primary" href="booking.html">Get a Quote</a>
+          <a class="button button-secondary" href="tel:+16124242111">Call Now</a>
         </div>
         <div class="hero-stats">
           <div class="stat">
@@ -1292,6 +1373,34 @@
       </div>
     </section>
 
+    <section id="busy-people">
+      <div class="section-head">
+        <h2>Why busy people choose FIX IT Mobile.</h2>
+        <p>Mobile repair is built for customers who need the phone fixed without losing the day to driving, waiting, and coming back later.</p>
+      </div>
+      <div class="choice-grid">
+        <div class="choice-card"><strong>We Fit Your Schedule.</strong><span>Appointments are planned around home, office, and workplace timing.</span></div>
+        <div class="choice-card"><strong>No Waiting.</strong><span>Skip the repair shop lobby and avoid leaving your device behind.</span></div>
+        <div class="choice-card"><strong>We Come To You.</strong><span>Home, office, workplace, or another practical appointment location.</span></div>
+        <div class="choice-card"><strong>Same-Day Service</strong><span>Many iPhone screen, battery, and charging repairs can be handled quickly.</span></div>
+        <div class="choice-card"><strong>Premium OLED Screens</strong><span>Available for select iPhone models when you want an upgraded display option.</span></div>
+        <div class="choice-card"><strong>153+ Google Reviews</strong><span>Local customers trust the convenience, speed, and communication.</span></div>
+        <div class="choice-card"><strong>Warranty Included</strong><span>Eligible repairs include warranty coverage and clear expectations.</span></div>
+        <div class="choice-card"><strong>Fast Response Time</strong><span>Send your device model and issue so we can quote the right repair.</span></div>
+      </div>
+    </section>
+
+    <section id="trust">
+      <div class="trust-band" aria-label="FIX IT Mobile trust signals">
+        <div>&#9733;&#9733;&#9733;&#9733;&#9733; 153+ Google Reviews</div>
+        <div>4.9 Rating</div>
+        <div>Thousands of Devices Repaired</div>
+        <div>Fast Response Time</div>
+        <div>Premium Parts</div>
+        <div>Licensed Business</div>
+      </div>
+    </section>
+
     <section id="services">
       <div class="section-head">
         <h2>Services with clear starting prices.</h2>
@@ -1333,11 +1442,53 @@
           <p><a href="ipad-screen-repair/">iPad screen repair details</a></p>
         </article>
         <article class="service-card">
+          <h3>iPad Battery Replacement</h3>
+          <p>For short battery life, swelling concerns, and shutdown issues on eligible iPads.</p>
+          <div class="price">Quote based on model</div>
+          <p>We confirm the iPad generation before quoting parts and timing.</p>
+          <p><a href="ipad-battery-replacement/">iPad battery replacement details</a></p>
+        </article>
+        <article class="service-card">
           <h3>Back Glass Repair</h3>
           <p>Back glass replacement for eligible iPhone and Android models.</p>
           <div class="price">Quote required</div>
           <p>Availability depends on the model and repair method required.</p>
           <p><a href="back-glass-repair/">Back glass repair details</a></p>
+        </article>
+        <article class="service-card">
+          <h3>Camera Repair</h3>
+          <p>For blurry cameras, black camera screens, cracked lens glass, and focus issues.</p>
+          <div class="price">Camera repair from $49.99</div>
+          <p>We diagnose the issue before recommending parts.</p>
+          <p><a href="camera-repair/">Camera repair details</a></p>
+        </article>
+        <article class="service-card">
+          <h3>Water Damage Repair</h3>
+          <p>Diagnostics for liquid exposure, charging trouble, no power, and display problems.</p>
+          <div class="price">Diagnostics from $39.99</div>
+          <p>We inspect first and explain realistic repair options.</p>
+          <p><a href="water-damage-repair/">Water damage repair details</a></p>
+        </article>
+        <article class="service-card">
+          <h3>Samsung Repair</h3>
+          <p>Samsung screen, charging, camera, and diagnostic help for many Galaxy models.</p>
+          <div class="price">Samsung repair from $49.99</div>
+          <p>Parts and pricing depend on your exact model.</p>
+          <p><a href="samsung-repair/">Samsung repair details</a></p>
+        </article>
+        <article class="service-card">
+          <h3>Samsung Screen Replacement</h3>
+          <p>For cracked Samsung glass, display lines, dead touch, and black screens.</p>
+          <div class="price">Quote based on model</div>
+          <p>We confirm screen type, color, and part availability first.</p>
+          <p><a href="samsung-screen-repair/">Samsung screen replacement details</a></p>
+        </article>
+        <article class="service-card">
+          <h3>Samsung Charging Port Repair</h3>
+          <p>For loose cables, slow charging, debris, and unreliable Galaxy charging.</p>
+          <div class="price">Port repair from $49.99</div>
+          <p>We inspect before replacing parts.</p>
+          <p><a href="samsung-charging-port-repair/">Samsung charging port details</a></p>
         </article>
         <article class="service-card">
           <h3>Gorilla Screen Protector</h3>
@@ -1366,20 +1517,20 @@
 
     <section id="areas">
       <div class="section-head">
-        <h2>Service areas in the Twin Cities.</h2>
-        <p>Appointments are available across select nearby cities, with mobile repair built around convenience and flexible scheduling.</p>
+        <h2>Mobile repair service areas in the Twin Cities.</h2>
+        <p>Choose your city to see local mobile repair details, nearby landmarks, FAQs, and the repair services available near you.</p>
       </div>
       <div class="areas-wrap">
         <div class="area-grid">
-          <a class="area-pill" href="iphone-repair-edina/">Edina</a>
-          <a class="area-pill" href="iphone-repair-eagan/">Eagan</a>
-          <a class="area-pill" href="iphone-repair-bloomington/">Bloomington</a>
-          <a class="area-pill" href="iphone-repair-apple-valley/">Apple Valley</a>
-          <a class="area-pill" href="iphone-repair-minneapolis/">Minneapolis</a>
-          <a class="area-pill" href="iphone-repair-burnsville/">Burnsville</a>
-          <div class="area-pill">Lakeville</div>
-          <div class="area-pill">Richfield</div>
-          <div class="area-pill">Woodbury</div>
+          <a class="area-pill" href="iphone-repair-minneapolis/"><strong>Minneapolis</strong><span>Mobile iPhone repair for homes, apartments, and Downtown Minneapolis offices.</span><em>View Minneapolis page</em></a>
+          <a class="area-pill" href="iphone-repair-edina/"><strong>Edina</strong><span>On-site screen, battery, iPad, and Samsung repair near Southdale and 50th &amp; France.</span><em>View Edina page</em></a>
+          <a class="area-pill" href="iphone-repair-bloomington/"><strong>Bloomington</strong><span>Convenient repair for Bloomington homes, hotels, offices, and nearby businesses.</span><em>View Bloomington page</em></a>
+          <a class="area-pill" href="iphone-repair-eagan/"><strong>Eagan</strong><span>Same-day mobile repair for Eagan neighborhoods, offices, and workplaces.</span><em>View Eagan page</em></a>
+          <a class="area-pill" href="iphone-repair-apple-valley/"><strong>Apple Valley</strong><span>Phone and tablet repair for Apple Valley homeowners, families, and workplaces.</span><em>View Apple Valley page</em></a>
+          <a class="area-pill" href="iphone-repair-burnsville/"><strong>Burnsville</strong><span>Mobile repair for Burnsville commuters, homes, offices, and job sites.</span><em>View Burnsville page</em></a>
+          <a class="area-pill" href="iphone-repair-lakeville/"><strong>Lakeville</strong><span>Repair that comes to Lakeville homes, offices, and busy family schedules.</span><em>View Lakeville page</em></a>
+          <a class="area-pill" href="iphone-repair-richfield/"><strong>Richfield</strong><span>On-site phone repair near Richfield apartments, homes, offices, and business areas.</span><em>View Richfield page</em></a>
+          <a class="area-pill" href="iphone-repair-st-paul/"><strong>St. Paul</strong><span>Mobile iPhone, iPad, and Samsung repair for St. Paul homes and workplaces.</span><em>View St. Paul page</em></a>
         </div>
       </div>
     </section>

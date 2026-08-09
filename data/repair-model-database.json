@@ -1,0 +1,40 @@
+{
+  "purpose": "Seed data for future model-specific repair landing pages. Keep pages useful and only publish when each model entry has real pricing, parts notes, FAQs, and local service copy.",
+  "models": [
+    {
+      "slug": "iphone-15-screen-replacement",
+      "device": "iPhone 15",
+      "repair": "Screen Replacement",
+      "primaryKeyword": "iPhone 15 screen replacement",
+      "relatedCityIntent": ["Minneapolis", "Edina", "Bloomington", "Eagan", "Apple Valley", "Burnsville", "Lakeville", "Richfield", "St. Paul"]
+    },
+    {
+      "slug": "iphone-16-pro-screen-replacement",
+      "device": "iPhone 16 Pro",
+      "repair": "Screen Replacement",
+      "primaryKeyword": "iPhone 16 Pro screen replacement",
+      "relatedCityIntent": ["Minneapolis", "Edina", "Bloomington", "Eagan", "Apple Valley", "Burnsville", "Lakeville", "Richfield", "St. Paul"]
+    },
+    {
+      "slug": "iphone-14-pro-max-screen-replacement",
+      "device": "iPhone 14 Pro Max",
+      "repair": "Screen Replacement",
+      "primaryKeyword": "iPhone 14 Pro Max screen replacement",
+      "relatedCityIntent": ["Minneapolis", "Edina", "Bloomington", "Eagan", "Apple Valley", "Burnsville", "Lakeville", "Richfield", "St. Paul"]
+    },
+    {
+      "slug": "ipad-10-screen-replacement",
+      "device": "iPad 10th generation",
+      "repair": "Screen Replacement",
+      "primaryKeyword": "iPad 10 screen replacement",
+      "relatedCityIntent": ["Minneapolis", "Edina", "Bloomington", "Eagan", "Apple Valley", "Burnsville", "Lakeville", "Richfield", "St. Paul"]
+    },
+    {
+      "slug": "s22-ultra-charging-port-repair",
+      "device": "Samsung Galaxy S22 Ultra",
+      "repair": "Charging Port Repair",
+      "primaryKeyword": "S22 Ultra charging port repair",
+      "relatedCityIntent": ["Minneapolis", "Edina", "Bloomington", "Eagan", "Apple Valley", "Burnsville", "Lakeville", "Richfield", "St. Paul"]
+    }
+  ]
+}
